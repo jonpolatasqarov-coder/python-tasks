@@ -1,0 +1,102 @@
+[ 
+    {
+        "type": "Car",
+        "name": "Toyota",
+        "price_per_day": 50
+    },
+    {
+        "type": "Car",
+        "name": "BMW",
+        "price_per_day": 80
+    },
+    {
+        "type": "Car",
+        "name": "Mercedes",
+        "price_per_day": 90
+    },
+    {
+        "type": "Car",
+        "name": "Audi",
+        "price_per_day": 85
+    },
+    {
+        "type": "Car",
+        "name": "Honda",
+        "price_per_day": 45
+    },
+    {
+        "type": "Car",
+        "name": "Ford",
+        "price_per_day": 55
+    },
+    {
+        "type": "Car",
+        "name": "Lexus",
+        "price_per_day": 95
+    },
+    {
+        "type": "Car",
+        "name": "Tesla",
+        "price_per_day": 100
+    },
+    {
+        "type": "Truck",
+        "name": "Volvo",
+        "price_per_day": 100
+    },
+    {
+        "type": "Truck",
+        "name": "MAN",
+        "price_per_day": 110
+    },
+    {
+        "type": "Truck",
+        "name": "Scania",
+        "price_per_day": 130
+    },
+    {
+        "type": "Truck",
+        "name": "Iveco",
+        "price_per_day": 105
+    },
+    {
+        "type": "Truck",
+        "name": "DAF",
+        "price_per_day": 115
+    },
+    {
+        "type": "Truck",
+        "name": "Renault",
+        "price_per_day": 95
+    },
+    {
+        "type": "Bike",
+        "name": "Yamaha",
+        "price_per_day": 30
+    },
+    {
+        "type": "Bike",
+        "name": "Kawasaki",
+        "price_per_day": 50
+    },
+    {
+        "type": "Bike",
+        "name": "Suzuki",
+        "price_per_day": 45
+    },
+    {
+        "type": "Bike",
+        "name": "Ducati",
+        "price_per_day": 70
+    },
+    {
+        "type": "Bike",
+        "name": "KTM",
+        "price_per_day": 55
+    },
+    {
+        "type": "Bike",
+        "name": "Harley",
+        "price_per_day": 80
+    }
+]

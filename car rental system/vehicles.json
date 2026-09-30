@@ -1,0 +1,142 @@
+[
+    {
+        "type": "Car",
+        "name": "Toyota",
+        "price_per_day": 50,
+        "is_available": true,
+        "rental_count": 0
+    },
+    {
+        "type": "Car",
+        "name": "BMW",
+        "price_per_day": 80,
+        "is_available": true,
+        "rental_count": 0
+    },
+    {
+        "type": "Car",
+        "name": "Mercedes",
+        "price_per_day": 90,
+        "is_available": true,
+        "rental_count": 0
+    },
+    {
+        "type": "Car",
+        "name": "Audi",
+        "price_per_day": 85,
+        "is_available": true,
+        "rental_count": 0
+    },
+    {
+        "type": "Car",
+        "name": "Honda",
+        "price_per_day": 45,
+        "is_available": true,
+        "rental_count": 0
+    },
+    {
+        "type": "Car",
+        "name": "Ford",
+        "price_per_day": 55,
+        "is_available": true,
+        "rental_count": 0
+    },
+    {
+        "type": "Car",
+        "name": "Lexus",
+        "price_per_day": 95,
+        "is_available": true,
+        "rental_count": 0
+    },
+    {
+        "type": "Car",
+        "name": "Tesla",
+        "price_per_day": 100,
+        "is_available": true,
+        "rental_count": 1
+    },
+    {
+        "type": "Truck",
+        "name": "Volvo",
+        "price_per_day": 100,
+        "is_available": true,
+        "rental_count": 0
+    },
+    {
+        "type": "Truck",
+        "name": "MAN",
+        "price_per_day": 110,
+        "is_available": true,
+        "rental_count": 0
+    },
+    {
+        "type": "Truck",
+        "name": "Scania",
+        "price_per_day": 130,
+        "is_available": true,
+        "rental_count": 0
+    },
+    {
+        "type": "Truck",
+        "name": "Iveco",
+        "price_per_day": 105,
+        "is_available": true,
+        "rental_count": 0
+    },
+    {
+        "type": "Truck",
+        "name": "DAF",
+        "price_per_day": 115,
+        "is_available": true,
+        "rental_count": 0
+    },
+    {
+        "type": "Truck",
+        "name": "Renault",
+        "price_per_day": 95,
+        "is_available": true,
+        "rental_count": 0
+    },
+    {
+        "type": "Bike",
+        "name": "Yamaha",
+        "price_per_day": 30,
+        "is_available": true,
+        "rental_count": 0
+    },
+    {
+        "type": "Bike",
+        "name": "Kawasaki",
+        "price_per_day": 50,
+        "is_available": true,
+        "rental_count": 1
+    },
+    {
+        "type": "Bike",
+        "name": "Suzuki",
+        "price_per_day": 45,
+        "is_available": true,
+        "rental_count": 0
+    },
+    {
+        "type": "Bike",
+        "name": "Ducati",
+        "price_per_day": 70,
+        "is_available": true,
+        "rental_count": 5
+    },
+    {
+        "type": "Bike",
+        "name": "KTM",
+        "price_per_day": 55,
+        "is_available": true,
+        "rental_count": 2
+    },
+    {
+        "type": "Bike",
+        "name": "Harley",
+        "price_per_day": 80,
+        "is_available": true,
+        "rental_count": 0
+    }
+]

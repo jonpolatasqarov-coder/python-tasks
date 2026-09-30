@@ -1,0 +1,110 @@
+[
+    {
+        "name": "Martin",
+        "points": 12,
+        "matches_played": 4,
+        "wins": 4,
+        "draws": 0,
+        "losses": 0,
+        "goals_scored": 15,
+        "goals_conceded": 5,
+        "clean_sheets": 2,
+        "goal_difference": 10
+    },
+    {
+        "name": "Ronaldo",
+        "points": 6,
+        "matches_played": 3,
+        "wins": 2,
+        "draws": 0,
+        "losses": 1,
+        "goals_scored": 13,
+        "goals_conceded": 10,
+        "clean_sheets": 0,
+        "goal_difference": 3
+    },
+    {
+        "name": "Skorseze",
+        "points": 3,
+        "matches_played": 2,
+        "wins": 1,
+        "draws": 0,
+        "losses": 1,
+        "goals_scored": 6,
+        "goals_conceded": 5,
+        "clean_sheets": 1,
+        "goal_difference": 1
+    },
+    {
+        "name": "Heisenberg",
+        "points": 3,
+        "matches_played": 2,
+        "wins": 1,
+        "draws": 0,
+        "losses": 1,
+        "goals_scored": 3,
+        "goals_conceded": 6,
+        "clean_sheets": 0,
+        "goal_difference": -3
+    },
+    {
+        "name": "Messi",
+        "points": 0,
+        "matches_played": 1,
+        "wins": 0,
+        "draws": 0,
+        "losses": 1,
+        "goals_scored": 3,
+        "goals_conceded": 4,
+        "clean_sheets": 0,
+        "goal_difference": -1
+    },
+    {
+        "name": "Buba",
+        "points": 0,
+        "matches_played": 1,
+        "wins": 0,
+        "draws": 0,
+        "losses": 1,
+        "goals_scored": 2,
+        "goals_conceded": 3,
+        "clean_sheets": 0,
+        "goal_difference": -1
+    },
+    {
+        "name": "Jesse",
+        "points": 0,
+        "matches_played": 1,
+        "wins": 0,
+        "draws": 0,
+        "losses": 1,
+        "goals_scored": 1,
+        "goals_conceded": 2,
+        "clean_sheets": 0,
+        "goal_difference": -1
+    },
+    {
+        "name": "Nolan",
+        "points": 0,
+        "matches_played": 1,
+        "wins": 0,
+        "draws": 0,
+        "losses": 1,
+        "goals_scored": 0,
+        "goals_conceded": 4,
+        "clean_sheets": 0,
+        "goal_difference": -4
+    },
+    {
+        "name": "Officer",
+        "points": 0,
+        "matches_played": 1,
+        "wins": 0,
+        "draws": 0,
+        "losses": 1,
+        "goals_scored": 0,
+        "goals_conceded": 4,
+        "clean_sheets": 0,
+        "goal_difference": -4
+    }
+]
