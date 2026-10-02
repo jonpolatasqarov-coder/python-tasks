@@ -1,0 +1,122 @@
+[
+    {
+        "book_id": 1,
+        "title": "Dune",
+        "author": "Frank Herbert",
+        "description": "A science fiction story about a desert planet, political conflict, powerful families, war, survival, and a valuable resource called spice.",
+        "is_available": false,
+        "borrow_count": 1
+    },
+    {
+        "book_id": 2,
+        "title": "Foundation",
+        "author": "Isaac Asimov",
+        "description": "A science fiction story about a vast galactic empire, political conflict, science, mathematics, social change, and the struggle to preserve civilization.",
+        "is_available": true,
+        "borrow_count": 0
+    },
+    {
+        "book_id": 3,
+        "title": "1984",
+        "author": "George Orwell",
+        "description": "A dystopian story about government control, surveillance, political power, propaganda, censorship, and an individual struggling against an oppressive society.",
+        "is_available": true,
+        "borrow_count": 0
+    },
+    {
+        "book_id": 4,
+        "title": "Brave New World",
+        "author": "Aldous Huxley",
+        "description": "A dystopian science fiction story about a controlled society, technology, government power, social conditioning, happiness, and individual freedom.",
+        "is_available": true,
+        "borrow_count": 0
+    },
+    {
+        "book_id": 5,
+        "title": "The Hobbit",
+        "author": "J.R.R. Tolkien",
+        "description": "A fantasy adventure about a hobbit who travels through dangerous lands, encounters dragons, dwarves, treasure, magic, and unexpected enemies.",
+        "is_available": true,
+        "borrow_count": 0
+    },
+    {
+        "book_id": 6,
+        "title": "The Lord of the Rings",
+        "author": "J.R.R. Tolkien",
+        "description": "An epic fantasy adventure about friendship, war, courage, magic, powerful enemies, a dangerous journey, and the struggle against a dark lord.",
+        "is_available": true,
+        "borrow_count": 0
+    },
+    {
+        "book_id": 7,
+        "title": "Frankenstein",
+        "author": "Mary Shelley",
+        "description": "A gothic story about a scientist who creates a living creature, exploring ambition, isolation, fear, science, responsibility, and the consequences of creation.",
+        "is_available": true,
+        "borrow_count": 0
+    },
+    {
+        "book_id": 8,
+        "title": "Dracula",
+        "author": "Bram Stoker",
+        "description": "A gothic horror story about a mysterious vampire, fear, darkness, supernatural forces, a dangerous castle, and people fighting against an ancient evil.",
+        "is_available": true,
+        "borrow_count": 0
+    },
+    {
+        "book_id": 9,
+        "title": "Crime and Punishment",
+        "author": "Fyodor Dostoevsky",
+        "description": "A psychological novel about crime, guilt, morality, poverty, suffering, isolation, and the mental struggle of a man after committing a serious crime.",
+        "is_available": true,
+        "borrow_count": 0
+    },
+    {
+        "book_id": 10,
+        "title": "The Brothers Karamazov",
+        "author": "Fyodor Dostoevsky",
+        "description": "A philosophical novel about family conflict, morality, religion, guilt, human nature, murder, responsibility, and difficult questions about life.",
+        "is_available": true,
+        "borrow_count": 0
+    },
+    {
+        "book_id": 11,
+        "title": "The Great Gatsby",
+        "author": "F. Scott Fitzgerald",
+        "description": "A novel about wealth, ambition, love, social class, parties, dreams, and the hidden problems behind the glamorous life of wealthy people.",
+        "is_available": true,
+        "borrow_count": 0
+    },
+    {
+        "book_id": 12,
+        "title": "Pride and Prejudice",
+        "author": "Jane Austen",
+        "description": "A romantic novel about relationships, marriage, social class, family expectations, misunderstanding, pride, prejudice, and changing feelings.",
+        "is_available": true,
+        "borrow_count": 0
+    },
+    {
+        "book_id": 13,
+        "title": "The Count of Monte Cristo",
+        "author": "Alexandre Dumas",
+        "description": "An adventure story about betrayal, imprisonment, escape, revenge, wealth, identity, justice, and a man planning revenge against his enemies.",
+        "is_available": true,
+        "borrow_count": 0
+    },
+    {
+        "book_id": 14,
+        "title": "The Picture of Dorian Gray",
+        "author": "Oscar Wilde",
+        "description": "A gothic novel about beauty, youth, desire, morality, corruption, pleasure, identity, and the consequences of living without moral limits.",
+        "is_available": true,
+        "borrow_count": 0
+    },
+    {
+        "book_id": 15,
+        "title": "The Martian",
+        "author": "Andy Weir",
+        "description": "A science fiction survival story about an astronaut stranded on Mars who uses science, engineering, technology, problem solving, and determination to survive.",
+        "is_available": false,
+        "borrow_count": 1
+    }
+]

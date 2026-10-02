@@ -1,0 +1,13 @@
+[
+    {
+        "user_id": 1,
+        "name": "Jonpolat",
+        "email": "jonpolatasqarov@gmail.com",
+        "borrowed_books": [
+            1
+        ],
+        "borrow_dates": {
+            "1": "2026-10-16"
+        }
+    }
+]
