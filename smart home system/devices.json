@@ -1,0 +1,36 @@
+[
+    {
+        "name": "Living Room Light",
+        "type": "Light",
+        "is_on": true
+    },
+    {
+        "name": "Living Room Thermostat",
+        "type": "Thermostat",
+        "is_on": true,
+        "temperature": 26.0,
+        "temperature_history": [
+            35.0,
+            12.0,
+            14.0,
+            23.0,
+            31.0,
+            26.0
+        ]
+    },
+    {
+        "name": "Security Camera",
+        "type": "Camera",
+        "is_on": true
+    },
+    {
+        "name": "Main Alarm",
+        "type": "Alarm",
+        "is_on": true
+    },
+    {
+        "name": "Cooling Fan",
+        "type": "Fan",
+        "is_on": true
+    }
+]
