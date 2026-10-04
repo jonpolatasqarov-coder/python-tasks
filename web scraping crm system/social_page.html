@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CareerMesh People Search — Professional Network Scraping | Scrapify</title>
+  <meta name="description" content="Filter 50 CareerMesh profiles by region, industry, open-to status, and search. Live client-side filtering." />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#4f46e5" />
+  <link rel="canonical" href="https://scrapifydatalabs.com/playground/careermesh/people.html" />
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="/assets/css/styles.css?v=cm3" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="logo" href="/"><span class="logo-mark">S</span><span class="logo-text">Scrapify <span>Playground</span></span></a>
+      <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false">Menu</button>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href='/use-cases'>Use Cases</a></li>
+        <li><a href="/playground/careermesh/">CareerMesh</a></li>
+        <li><a href="/playground/directory/">LocalFind</a></li>
+        <li><a href='/about'>About</a></li>
+        <li><a class="nav-discord" href="https://discord.gg/gwSB7u5Vz" target="_blank" rel="noopener noreferrer" aria-label="Join our Discord community">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
+          Discord
+        </a></li>
+        <li><a class='nav-cta' href='/use-cases'>Start scraping</a></li>
+      </ul>
+    </div>
+  </header>
+  <section class="page-hero"><div class="container">
+    <div class="breadcrumb"><a href="/">Home</a> / <a href='/use-cases'>Use Cases</a> / <span>CareerMesh People</span></div>
+    <h1>CareerMesh · People (50)</h1>
+    <p>Working left filters refresh the list instantly. JSON: <code>/data/careermesh-people.json</code></p>
+    <div class="page-meta"><span class="badge badge-medium">Medium</span><span class="badge badge-js">JS filters</span></div>
+  </div></section>
+  <main class="playground"><div class="container-wide">
+    <div class="challenge-banner"><div><h2>Challenge</h2><p>Scrape all people (or only visible after filters): id, name, headline, location, region, industry, open_to, connections, profile URL.</p></div>
+    <a class='btn btn-secondary btn-sm' href='/playground/careermesh/jobs'>Jobs →</a></div>
+    <div class="cm-shell" id="careermesh-people" data-network="careermesh" data-total="50">
+      <div class="cm-nav">
+        <a class="cm-logo" href="/playground/careermesh/">Career<span>Mesh</span></a>
+        <form class="cm-search" action="#" method="get">
+          <input name="q" id="cm-people-search" value="" placeholder="Search people, skills, companies…" aria-label="Search people" />
+        </form>
+        <div class="cm-nav-links">
+          <a href="/playground/careermesh/">Home</a>
+          <a href='/playground/careermesh/people'>People</a>
+          <a href='/playground/careermesh/jobs'>Jobs</a>
+          <a href="/data/careermesh-people.json">API</a>
+        </div>
+      </div>
+      <div class="cm-layout">
+        <aside class="cm-card cm-filters" id="cm-people-filters">
+          <h3>Filters</h3>
+          <p class="cm-meta" style="margin:0 0 0.65rem;">Results update as you click</p>
+          <h4 style="margin:0.5rem 0;font-size:0.85rem;">Locations</h4>
+          <label><input type="checkbox" name="region" value="us" /> United States <span class="cm-meta" data-facet-count="region:us">(11)</span></label>
+          <label><input type="checkbox" name="region" value="uk" /> United Kingdom <span class="cm-meta" data-facet-count="region:uk">(4)</span></label>
+          <label><input type="checkbox" name="region" value="canada" /> Canada <span class="cm-meta" data-facet-count="region:canada">(3)</span></label>
+          <label><input type="checkbox" name="region" value="europe" /> Europe <span class="cm-meta" data-facet-count="region:europe">(9)</span></label>
+          <label><input type="checkbox" name="region" value="asia" /> Asia <span class="cm-meta" data-facet-count="region:asia">(14)</span></label>
+          <label><input type="checkbox" name="region" value="latam" /> Latin America <span class="cm-meta" data-facet-count="region:latam">(6)</span></label>
+          <label><input type="checkbox" name="region" value="africa" /> Africa <span class="cm-meta" data-facet-count="region:africa">(2)</span></label>
+          <label><input type="checkbox" name="region" value="oceania" /> Oceania <span class="cm-meta" data-facet-count="region:oceania">(1)</span></label>
+          <h4 style="margin:0.75rem 0 0.35rem;font-size:0.85rem;">Open to</h4>
+          <label><input type="checkbox" name="open_to" value="Hiring" /> Hiring <span class="cm-meta" data-facet-count="open_to:Hiring">(18)</span></label>
+          <label><input type="checkbox" name="open_to" value="Open to work" /> Open to work <span class="cm-meta" data-facet-count="open_to:Open to work">(17)</span></label>
+          <h4 style="margin:0.75rem 0 0.35rem;font-size:0.85rem;">Industry</h4>
+          <label><input type="checkbox" name="industry" value="Artificial Intelligence" /> Artificial Intelligence <span class="cm-meta" data-facet-count="industry:Artificial Intelligence">(3)</span></label>
+          <label><input type="checkbox" name="industry" value="Computer &amp; Network Security" /> Computer &amp; Network Security <span class="cm-meta" data-facet-count="industry:Computer &amp; Network Security">(2)</span></label>
+          <label><input type="checkbox" name="industry" value="Computer Software" /> Computer Software <span class="cm-meta" data-facet-count="industry:Computer Software">(5)</span></label>
+          <label><input type="checkbox" name="industry" value="Customer Service" /> Customer Service <span class="cm-meta" data-facet-count="industry:Customer Service">(2)</span></label>
+          <label><input type="checkbox" name="industry" value="Data &amp; Analytics" /> Data &amp; Analytics <span class="cm-meta" data-facet-count="industry:Data &amp; Analytics">(4)</span></label>
+          <label><input type="checkbox" name="industry" value="Design" /> Design <span class="cm-meta" data-facet-count="industry:Design">(3)</span></label>
+          <label><input type="checkbox" name="industry" value="Electrical &amp; Electronic Manufacturing" /> Electrical &amp; Electronic Manufacturing <span class="cm-meta" data-facet-count="industry:Electrical &amp; Electronic Manufacturing">(1)</span></label>
+          <label><input type="checkbox" name="industry" value="Financial Services" /> Financial Services <span class="cm-meta" data-facet-count="industry:Financial Services">(2)</span></label>
+          <label><input type="checkbox" name="industry" value="Human Resources" /> Human Resources <span class="cm-meta" data-facet-count="industry:Human Resources">(2)</span></label>
+          <label><input type="checkbox" name="industry" value="Information Technology" /> Information Technology <span class="cm-meta" data-facet-count="industry:Information Technology">(5)</span></label>
+          <label><input type="checkbox" name="industry" value="Internet" /> Internet <span class="cm-meta" data-facet-count="industry:Internet">(2)</span></label>
+          <label><input type="checkbox" name="industry" value="Legal Services" /> Legal Services <span class="cm-meta" data-facet-count="industry:Legal Services">(2)</span></label>
+          <label><input type="checkbox" name="industry" value="Marketing &amp; Advertising" /> Marketing &amp; Advertising <span class="cm-meta" data-facet-count="industry:Marketing &amp; Advertising">(3)</span></label>
+          <label><input type="checkbox" name="industry" value="Operations" /> Operations <span class="cm-meta" data-facet-count="industry:Operations">(2)</span></label>
+          <label><input type="checkbox" name="industry" value="Software Development" /> Software Development <span class="cm-meta" data-facet-count="industry:Software Development">(10)</span></label>
+          <label><input type="checkbox" name="industry" value="Writing &amp; Editing" /> Writing &amp; Editing <span class="cm-meta" data-facet-count="industry:Writing &amp; Editing">(2)</span></label>
+          <button type="button" class="cm-btn" id="cm-clear-people" style="margin-top:0.85rem;width:100%;">Clear filters</button>
+        </aside>
+        <section class="cm-card" id="people-results">
+          <h2 id="cm-people-count">People · 50 results</h2>
+          <article class="cm-person" data-person-id="p-ava-chen" data-location="Austin, Texas, United States" data-region="us" data-industry="Software Development" data-open-to-value="Hiring" data-connections="500" data-followers="1280">
+            <div class="cm-avatar" aria-hidden="true">AC</div>
+            <div>
+              <h3 class="cm-name"><a href='/playground/careermesh/person-p-ava-chen'>Ava Chen</a></h3>
+              <p class="cm-headline">Senior Data Engineer @ Nimbus Metrics · Scraping &amp; ETL</p>
+              <div class="cm-meta">Austin, Texas, United States · Software Development · 500+ connections · 1280 followers</div>
+              <div style="margin-top:0.35rem;"><span class="cm-badge" data-open-to="Hiring">Hiring</span></div>
+            </div>
+            <a class='cm-btn' href='/playground/careermesh/person-p-ava-chen'>View profile</a>
+          </article>
+          <article class="cm-person" data-person-id="p-marcus-lee" data-location="Seattle, Washington, United States" data-region="us" data-industry="Computer Software" data-open-to-value="Open to work" data-connections="500" data-followers="2400">
+            <div class="cm-avatar" aria-hidden="true">ML</div>
+            <div>
+              <h3 class="cm-name"><a href='/playground/careermesh/person-p-marcus-lee'>Marcus Lee</a></h3>
+              <p class="cm-headline">Staff Software Engineer · Distributed Systems</p>
+              <div class="cm-meta">Seattle, Washington, United States · Computer Software · 500+ connections · 2400 followers</div>
+              <div style="margin-top:0.35rem;"><span class="cm-badge" data-open-to="Open to work">Open to work</span></div>
+            </div>
+            <a class='cm-btn' href='/playground/careermesh/person-p-marcus-lee'>View profile</a>
+          </article>
+          <article class="cm-person" data-person-id="p-sofia-rahman" data-location="London, England, United Kingdom" data-region="uk" data-industry="Internet" data-open-to-value="" data-connections="420" data-followers="890">
+            <div class="cm-avatar" aria-hidden="true">SR</div>
+            <div>
+              <h3 class="cm-name"><a href='/playground/careermesh/person-p-sofia-rahman'>Sofia Rahman</a></h3>
+              <p class="cm-headline">Product Manager · Marketplace Growth</p>
+              <div class="cm-meta">London, England, United Kingdom · Internet · 420+ connections · 890 followers</div>
+              <div style="margin-top:0.35rem;"></div>
+            </div>
+            <a class='cm-btn' href='/playground/careermesh/person-p-sofia-rahman'>View profile</a>
+          </article>
+          <article class="cm-person" data-person-id="p-jonah-park" data-location="San Francisco Bay Area, United States" data-region="us" data-industry="Artificial Intelligence" data-open-to-value="Hiring" data-connections="500" data-followers="3100">
+            <div class="cm-avatar" aria-hidden="true">JP</div>
+            <div>
+              <h3 class="cm-name"><a href='/playground/careermesh/person-p-jonah-park'>Jonah Park</a></h3>
+              <p class="cm-headline">ML Engineer · Ranking &amp; Recommendations</p>
+              <div class="cm-meta">San Francisco Bay Area, United States · Artificial Intelligence · 500+ connections · 3100 followers</div>
+              <div style="margin-top:0.35rem;"><span class="cm-badge" data-open-to="Hiring">Hiring</span></div>
+            </div>
+            <a class='cm-btn' href='/playground/careermesh/person-p-jonah-park'>View profile</a>
+          </article>
+          <article class="cm-person" data-person-id="p-riley-nguyen" data-location="Toronto, Ontario, Canada" data-region="canada" data-industry="Software Development" data-open-to-value="Open to work" data-connections="310" data-followers="540">
+            <div class="cm-avatar" aria-hidden="true">RN</div>
+            <div>
+              <h3 class="cm-name"><a href='/playground/careermesh/person-p-riley-nguyen'>Riley Nguyen</a></h3>
+              <p class="cm-headline">Frontend Engineer · Design Systems</p>
+              <div class="cm-meta">Toronto, Ontario, Canada · Software Development · 310+ connections · 540 followers</div>
+              <div style="margin-top:0.35rem;"><span class="cm-badge" data-open-to="Open to work">Open to work</span></div>
+            </div>
+            <a class='cm-btn' href='/playground/careermesh/person-p-riley-nguyen'>View profile</a>
+          </article>
+          <article class="cm-person" data-person-id="p-devon-okonkwo" data-location="Berlin, Germany" data-region="europe" data-industry="Computer &amp; Network Security" data-open-to-value="" data-connections="280" data-followers="670">
+            <div class="cm-avatar" aria-hidden="true">DO</div>
+            <div>
+              <h3 class="cm-name"><a href='/playground/careermesh/person-p-devon-okonkwo'>Devon Okonkwo</a></h3>
+              <p class="cm-headline">Security Engineer · AppSec &amp; Bot Defense</p>
+              <div class="cm-meta">Berlin, Germany · Computer &amp; Network Security · 280+ connections · 670 followers</div>
+              <div style="margin-top:0.35rem;"></div>
+            </div>
+            <a class='cm-btn' href='/playground/careermesh/person-p-devon-okonkwo'>View profile</a>
+          </article>
+          <article class="cm-person" data-person-id="p-hana-suzuki" data-location="Tokyo, Japan" data-region="asia" data-industry="Design" data-open-to-value="Open to work" data-connections="190" data-followers="420">
+            <div class="cm-avatar" aria-hidden="true">HS</div>
+            <div>
+              <h3 class="cm-name"><a href='/playground/careermesh/person-p-hana-suzuki'>Hana Suzuki</a></h3>
+              <p class="cm-headline">UX Researcher · B2B SaaS</p>
+              <div class="cm-meta">Tokyo, Japan · Design · 190+ connections · 420 followers</div>
+              <div style="margin-top:0.35rem;"><span class="cm-badge" data-open-to="Open to work">Open to work</span></div>
+            </div>
+            <a class='cm-btn' href='/playground/careermesh/person-p-hana-suzuki'>View profile</a>
+          </article>
+          <article class="cm-person" data-person-id="p-eli-brooks" data-location="Denver, Colorado, United States" data-region="us" data-industry="Software Development" data-open-to-value="Hiring" data-connections="500" data-followers="5200">
+            <div class="cm-avatar" aria-hidden="true">EB</div>
+            <div>
+              <h3 class="cm-name"><a href='/playground/careermesh/person-p-eli-brooks'>Eli Brooks</a></h3>
+              <p class="cm-headline">DevRel · APIs &amp; Open Source</p>
+              <div class="cm-meta">Denver, Colorado, United States · Software Development · 500+ connections · 5200 followers</div>
+              <div style="margin-top:0.35rem;"><span class="cm-badge" data-open-to="Hiring">Hiring</span></div>
+            </div>
+            <a class='cm-btn' href='/playground/careermesh/person-p-eli-brooks'>View profile</a>
+          </article>
+          <article class="cm-person" data-person-id="p-maya-patel" data-location="Bengaluru, India" data-region="asia" data-industry="Human Resources" data-open-to-value="Hiring" data-connections="450" data-followers="980">
+            <div class="cm-avatar" aria-hidden="true">MP</div>
+            <div>
+              <h3 class="cm-name"><a href='/playground/careermesh/person-p-maya-patel'>Maya Patel</a></h3>
+              <p class="cm-headline">People Ops Partner · Tech Recruiting</p>
+              <div class="cm-meta">Bengaluru, India · Human Resources · 450+ connections · 980 followers</div>
+              <div style="margin-top:0.35rem;"><span class="cm-badge" data-open-to="Hiring">Hiring</span></div>
+            </div>
+            <a class='cm-btn' href='/playground/careermesh/person-p-maya-patel'>View profile</a>
+          </article>
+          <article class="cm-person" data-person-id="p-chris-ng" data-location="Singapore" data-region="asia" data-industry="Information Technology" data-open-to-value="" data-connections="360" data-followers="710">
+            <div class="cm-avatar" aria-hidden="true">CN</div>
+            <div>
+              <h3 class="cm-name"><a href='/playground/careermesh/person-p-chris-ng'>Chris Ng</a></h3>
+              <p class="cm-headline">SRE · Reliability &amp; Observability</p>
+              <div class="cm-meta">Singapore · Information Technology · 360+ connections · 710 followers</div>
+              <div style="margin-top:0.35rem;"></div>
+            </div>
+            <a class='cm-btn' href='/playground/careermesh/person-p-chris-ng'>View profile</a>
+          </article>
+          <article class="cm-person" data-person-id="p-zoe-martinez" data-location="Mexico City, Mexico" data-region="latam" data-industry="Marketing &amp; Advertising" data-open-to-value="Open to work" data-connections="270" data-followers="1500">
+            <div class="cm-avatar" aria-hidden="true">ZM</div>
+            <div>
+              <h3 class="cm-name"><a href='/playground/careermesh/person-p-zoe-martinez'>Zoe Martinez</a></h3>
+              <p class="cm-headline">Growth Marketer · Performance &amp; SEO</p>
+              <div class="cm-meta">Mexico City, Mexico · Marketing &amp; Advertising · 270+ connections · 1500 followers</div>
+              <div style="margin-top:0.35rem;"><span class="cm-badge" data-open-to="Open to work">Open to work</span></div>
+            </div>
+            <a class='cm-btn' href='/playground/careermesh/person-p-zoe-martinez'>View profile</a>
+          </article>
+          <article class="cm-person" data-person-id="p-noah-kim" data-location="New York City, United States" data-region="us" data-industry="Software Development" data-open-to-value="" data-connections="330" data-followers="640">
+            <div class="cm-avatar" aria-hidden="true">NK</div>
+            <div>
+              <h3 class="cm-name"><a href='/playground/careermesh/person-p-noah-kim'>Noah Kim</a></h3>
+              <p class="cm-headline">iOS Engineer · Mobile Platforms</p>
+              <div class="cm-meta">New York City, United States · Software Development · 330+ connections · 640 followers</div>
+              <div style="margin-top:0.35rem;"></div>
+            </div>
+            <a class='cm-btn' href='/playground/careermesh/person-p-noah-kim'>View profile</a>
+          </article>
+          <article class="cm-person" data-person-id="p-lena-hoffman" data-location="Munich, Germany" data-region="europe" data-industry="Data &amp; Analytics" data-open-to-value="Open to work" data-connections="210" data-followers="380">
+            <div class="cm-avatar" aria-hidden="true">LH</div>
+            <div>
+              <h3 class="cm-name"><a href='/playground/careermesh/person-p-lena-hoffman'>Lena Hoffman</a></h3>
+              <p class="cm-headline">Data Analyst · Marketplace Insights</p>
+              <div class="cm-meta">Munich, Germany · Data &amp; Analytics · 210+ connections · 380 followers</div>
+              <div style="margin-top:0.35rem;"><span class="cm-badge" data-open-to="Open to work">Open to work</span></div>
+            </div>
+            <a class='cm-btn' href='/playground/careermesh/person-p-lena-hoffman'>View profile</a>
+          </article>
+          <article class="cm-person" data-person-id="p-raj-sharma" data-location="Bengaluru, India" data-region="asia" data-industry="Computer Software" data-open-to-value="Hiring" data-connections="480" data-followers="1200">
+            <div class="cm-avatar" aria-hidden="true">RS</div>
+            <div>
+              <h3 class="cm-name"><a href='/playground/careermesh/person-p-raj-sharma'>Raj Sharma</a></h3>
+              <p class="cm-headline">Backend Engineer · Payments</p>
+              <div class="cm-meta">Bengaluru, India · Computer Software · 480+ connections · 1200 followers</div>
+              <div style="margin-top:0.35rem;"><span class="cm-badge" data-open-to="Hiring">Hiring</span></div>
+            </div>
+            <a class='cm-btn' href='/playground/careermesh/person-p-raj-sharma'>View profile</a>
+          </article>
+          <article class="cm-person" data-person-id="p-emma-wilson" data-location="Manchester, England, United Kingdom" data-region="uk" data-industry="Writing &amp; Editing" data-open-to-value="" data-connections="175" data-followers="890">
+            <div class="cm-avatar" aria-hidden="true">EW</div>
+            <div>
+              <h3 class="cm-name"><a href='/playground/careermesh/person-p-emma-wilson'>Emma Wilson</a></h3>
+              <p class="cm-headline">Content Strategist · Developer Docs</p>
+              <div class="cm-meta">Manchester, England, United Kingdom · Writing &amp; Editing · 175+ connections · 890 followers</div>
+              <div style="margin-top:0.35rem;"></div>
+            </div>
+            <a class='cm-btn' href='/playground/careermesh/person-p-emma-wilson'>View profile</a>
+          </article>
+          <article class="cm-person" data-person-id="p-carlos-mendez" data-location="Buenos Aires, Argentina" data-region="latam" data-industry="Software Development" data-open-to-value="Open to work" data-connections="290" data-followers="510">
+            <div class="cm-avatar" aria-hidden="true">CM</div>
+            <div>
+              <h3 class="cm-name"><a href='/playground/careermesh/person-p-carlos-mendez'>Carlos Méndez</a></h3>
+              <p class="cm-headline">Full-Stack Engineer · EdTech</p>
+              <div class="cm-meta">Buenos Aires, Argentina · Software Development · 290+ connections · 510 followers</div>
+              <div style="margin-top:0.35rem;"><span class="cm-badge" data-open-to="Open to work">Open to work</span></div>
+            </div>
+            <a class='cm-btn' href='/playground/careermesh/person-p-carlos-mendez'>View profile</a>
+          </article>
+          <article class="cm-person" data-person-id="p-priya-nair" data-location="Remote · India" data-region="asia" data-industry="Design" data-open-to-value="Hiring" data-connections="340" data-followers="1500">
+            <div class="cm-avatar" aria-hidden="true">PN</div>
+            <div>
+              <h3 class="cm-name"><a href='/playground/careermesh/person-p-priya-nair'>Priya Nair</a></h3>
+              <p class="cm-headline">Product Designer · B2B SaaS</p>
+              <div class="cm-meta">Remote · India · Design · 340+ connections · 1500 followers</div>
+              <div style="margin-top:0.35rem;"><span class="cm-badge" data-open-to="Hiring">Hiring</span></div>
+            </div>
+            <a class='cm-btn' href='/playground/careermesh/person-p-priya-nair'>View profile</a>
+          </article>
+          <article class="cm-person" data-person-id="p-owen-clark" data-location="Chicago, Illinois, United States" data-region="us" data-industry="Information Technology" data-open-to-value="" data-connections="410" data-followers="760">
+            <div class="cm-avatar" aria-hidden="true">OC</div>
+            <div>
+              <h3 class="cm-name"><a href='/playground/careermesh/person-p-owen-clark'>Owen Clark</a></h3>
+              <p class="cm-headline">Sales Engineer · Cloud Infrastructure</p>
+              <div class="cm-meta">Chicago, Illinois, United States · Information Technology · 410+ connections · 760 followers</div>
+              <div style="margin-top:0.35rem;"></div>
+            </div>
+            <a class='cm-btn' href='/playground/careermesh/person-p-owen-clark'>View profile</a>
+          </article>
+          <article class="cm-person" data-person-id="p-amira-hassan" data-location="Amsterdam, Netherlands" data-region="europe" data-industry="Artificial Intelligence" data-open-to-value="Open to work" data-connections="255" data-followers="980">
+            <div class="cm-avatar" aria-hidden="true">AH</div>
+            <div>
+              <h3 class="cm-name"><a href='/playground/careermesh/person-p-amira-hassan'>Amira Hassan</a></h3>
+              <p class="cm-headline">Data Scientist · NLP</p>
+              <div class="cm-meta">Amsterdam, Netherlands · Artificial Intelligence · 255+ connections · 980 followers</div>
+              <div style="margin-top:0.35rem;"><span class="cm-badge" data-open-to="Open to work">Open to work</span></div>
+            </div>
+            <a class='cm-btn' href='/playground/careermesh/person-p-amira-hassan'>View profile</a>
+          </article>
+          <article class="cm-person" data-person-id="p-ben-okada" data-location="Osaka, Japan" data-region="asia" data-industry="Software Development" data-open-to-value="" data-connections="180" data-followers="320">
+            <div class="cm-avatar" aria-hidden="true">BO</div>
+            <div>
+              <h3 class="cm-name"><a href='/playground/careermesh/person-p-ben-okada'>Ben Okada</a></h3>
+              <p class="cm-headline">Mobile Engineer · Android</p>
+              <div class="cm-meta">Osaka, Japan · Software Development · 180+ connections · 320 followers</div>
+              <div style="margin-top:0.35rem;"></div>
+            </div>
+            <a class='cm-btn' href='/playground/careermesh/person-p-ben-okada'>View profile</a>
+          </article>
+          <article class="cm-person" data-person-id="p-sara-cohen" data-location="Tel Aviv, Israel" data-region="asia" data-industry="Operations" data-open-to-value="Hiring" data-connections="220" data-followers="410">
+            <div class="cm-avatar" aria-hidden="true">SC</div>
+            <div>
+              <h3 class="cm-name"><a href='/playground/careermesh/person-p-sara-cohen'>Sara Cohen</a></h3>
+              <p class="cm-headline">Ops Manager · Fulfillment</p>
+              <div class="cm-meta">Tel Aviv, Israel · Operations · 220+ connections · 410 followers</div>
+              <div style="margin-top:0.35rem;"><span class="cm-badge" data-open-to="Hiring">Hiring</span></div>
+            </div>
+            <a class='cm-btn' href='/playground/careermesh/person-p-sara-cohen'>View profile</a>
+          </article>
+          <article class="cm-person" data-person-id="p-liam-foster" data-location="Dublin, Ireland" data-region="europe" data-industry="Computer Software" data-open-to-value="Open to work" data-connections="300" data-followers="550">
+            <div class="cm-avatar" aria-hidden="true">LF</div>
+            <div>
+              <h3 class="cm-name"><a href='/playground/careermesh/person-p-liam-foster'>Liam Foster</a></h3>
+              <p class="cm-headline">QA Lead · Test Automation</p>
+              <div class="cm-meta">Dublin, Ireland · Computer Software · 300+ connections · 550 followers</div>
+              <div style="margin-top:0.35rem;"><span class="cm-badge" data-open-to="Open to work">Open to work</span></div>
+            </div>
+            <a class='cm-btn' href='/playground/careermesh/person-p-liam-foster'>View profile</a>
+          </article>
+          <article class="cm-person" data-person-id="p-nina-volkov" data-location="Toronto, Ontario, Canada" data-region="canada" data-industry="Financial Services" data-open-to-value="" data-connections="190" data-followers="280">
+            <div class="cm-avatar" aria-hidden="true">NV</div>
+            <div>
+              <h3 class="cm-name"><a href='/playground/careermesh/person-p-nina-volkov'>Nina Volkov</a></h3>
+              <p class="cm-headline">Finance Partner · SaaS Metrics</p>
+              <div class="cm-meta">Toronto, Ontario, Canada · Financial Services · 190+ connections · 280 followers</div>
+              <div style="margin-top:0.35rem;"></div>
+            </div>
+            <a class='cm-btn' href='/playground/careermesh/person-p-nina-volkov'>View profile</a>
+          </article>
+          <article class="cm-person" data-person-id="p-diego-silva" data-location="São Paulo, Brazil" data-region="latam" data-industry="Information Technology" data-open-to-value="Hiring" data-connections="360" data-followers="890">
+            <div class="cm-avatar" aria-hidden="true">DS</div>
+            <div>
+              <h3 class="cm-name"><a href='/playground/careermesh/person-p-diego-silva'>Diego Silva</a></h3>
+              <p class="cm-headline">Cloud Architect · Multi-region Systems</p>
+              <div class="cm-meta">São Paulo, Brazil · Information Technology · 360+ connections · 890 followers</div>
+              <div style="margin-top:0.35rem;"><span class="cm-badge" data-open-to="Hiring">Hiring</span></div>
+            </div>
+            <a class='cm-btn' href='/playground/careermesh/person-p-diego-silva'>View profile</a>
+          </article>
+          <article class="cm-person" data-person-id="p-grace-liu" data-location="San Jose, California, United States" data-region="us" data-industry="Data &amp; Analytics" data-open-to-value="Open to work" data-connections="275" data-followers="620">
+            <div class="cm-avatar" aria-hidden="true">GL</div>
+            <div>
+              <h3 class="cm-name"><a href='/playground/careermesh/person-p-grace-liu'>Grace Liu</a></h3>
+              <p class="cm-headline">Product Analyst · Experimentation</p>
+              <div class="cm-meta">San Jose, California, United States · Data &amp; Analytics · 275+ connections · 620 followers</div>
+              <div style="margin-top:0.35rem;"><span class="cm-badge" data-open-to="Open to work">Open to work</span></div>
+            </div>
+            <a class='cm-btn' href='/playground/careermesh/person-p-grace-liu'>View profile</a>
+          </article>
+          <article class="cm-person" data-person-id="p-tom-baker" data-location="London, England, United Kingdom" data-region="uk" data-industry="Customer Service" data-open-to-value="" data-connections="400" data-followers="330">
+            <div class="cm-avatar" aria-hidden="true">TB</div>
+            <div>
+              <h3 class="cm-name"><a href='/playground/careermesh/person-p-tom-baker'>Tom Baker</a></h3>
+              <p class="cm-headline">Customer Success Manager · Enterprise</p>
+              <div class="cm-meta">London, England, United Kingdom · Customer Service · 400+ connections · 330 followers</div>
+              <div style="margin-top:0.35rem;"></div>
+            </div>
+            <a class='cm-btn' href='/playground/careermesh/person-p-tom-baker'>View profile</a>
+          </article>
+          <article class="cm-person" data-person-id="p-yuki-tanaka" data-location="Tokyo, Japan" data-region="asia" data-industry="Electrical &amp; Electronic Manufacturing" data-open-to-value="Hiring" data-connections="150" data-followers="240">
+            <div class="cm-avatar" aria-hidden="true">YT</div>
+            <div>
+              <h3 class="cm-name"><a href='/playground/careermesh/person-p-yuki-tanaka'>Yuki Tanaka</a></h3>
+              <p class="cm-headline">Hardware Engineer · Wearables</p>
+              <div class="cm-meta">Tokyo, Japan · Electrical &amp; Electronic Manufacturing · 150+ connections · 240 followers</div>
+              <div style="margin-top:0.35rem;"><span class="cm-badge" data-open-to="Hiring">Hiring</span></div>
+            </div>
+            <a class='cm-btn' href='/playground/careermesh/person-p-yuki-tanaka'>View profile</a>
+          </article>
+          <article class="cm-person" data-person-id="p-olivia-ross" data-location="Washington, D.C., United States" data-region="us" data-industry="Legal Services" data-open-to-value="" data-connections="320" data-followers="700">
+            <div class="cm-avatar" aria-hidden="true">OR</div>
+            <div>
+              <h3 class="cm-name"><a href='/playground/careermesh/person-p-olivia-ross'>Olivia Ross</a></h3>
+              <p class="cm-headline">Legal Counsel · Privacy &amp; Data</p>
+              <div class="cm-meta">Washington, D.C., United States · Legal Services · 320+ connections · 700 followers</div>
+              <div style="margin-top:0.35rem;"></div>
+            </div>
+            <a class='cm-btn' href='/playground/careermesh/person-p-olivia-ross'>View profile</a>
+          </article>
+          <article class="cm-person" data-person-id="p-felix-brandt" data-location="Zurich, Switzerland" data-region="europe" data-industry="Software Development" data-open-to-value="Open to work" data-connections="240" data-followers="410">
+            <div class="cm-avatar" aria-hidden="true">FB</div>
+            <div>
+              <h3 class="cm-name"><a href='/playground/careermesh/person-p-felix-brandt'>Felix Brandt</a></h3>
+              <p class="cm-headline">Platform Engineer · Internal Tools</p>
+              <div class="cm-meta">Zurich, Switzerland · Software Development · 240+ connections · 410 followers</div>
+              <div style="margin-top:0.35rem;"><span class="cm-badge" data-open-to="Open to work">Open to work</span></div>
+            </div>
+            <a class='cm-btn' href='/playground/careermesh/person-p-felix-brandt'>View profile</a>
+          </article>
+          <article class="cm-person" data-person-id="p-isabella-cruz" data-location="Mexico City, Mexico" data-region="latam" data-industry="Marketing &amp; Advertising" data-open-to-value="Hiring" data-connections="500" data-followers="4200">
+            <div class="cm-avatar" aria-hidden="true">IC</div>
+            <div>
+              <h3 class="cm-name"><a href='/playground/careermesh/person-p-isabella-cruz'>Isabella Cruz</a></h3>
+              <p class="cm-headline">Community Manager · Open Source</p>
+              <div class="cm-meta">Mexico City, Mexico · Marketing &amp; Advertising · 500+ connections · 4200 followers</div>
+              <div style="margin-top:0.35rem;"><span class="cm-badge" data-open-to="Hiring">Hiring</span></div>
+            </div>
+            <a class='cm-btn' href='/playground/careermesh/person-p-isabella-cruz'>View profile</a>
+          </article>
+          <article class="cm-person" data-person-id="p-kai-mori" data-location="Portland, Oregon, United States" data-region="us" data-industry="Software Development" data-open-to-value="Hiring" data-connections="470" data-followers="1600">
+            <div class="cm-avatar" aria-hidden="true">KM</div>
+            <div>
+              <h3 class="cm-name"><a href='/playground/careermesh/person-p-kai-mori'>Kai Mori</a></h3>
+              <p class="cm-headline">Staff Platform Engineer · Developer Experience</p>
+              <div class="cm-meta">Portland, Oregon, United States · Software Development · 470+ connections · 1600 followers</div>
+              <div style="margin-top:0.35rem;"><span class="cm-badge" data-open-to="Hiring">Hiring</span></div>
+            </div>
+            <a class='cm-btn' href='/playground/careermesh/person-p-kai-mori'>View profile</a>
+          </article>
+          <article class="cm-person" data-person-id="p-aisha-khan" data-location="Hyderabad, India" data-region="asia" data-industry="Artificial Intelligence" data-open-to-value="Open to work" data-connections="380" data-followers="920">
+            <div class="cm-avatar" aria-hidden="true">AK</div>
+            <div>
+              <h3 class="cm-name"><a href='/playground/careermesh/person-p-aisha-khan'>Aisha Khan</a></h3>
+              <p class="cm-headline">MLOps Engineer · Model Serving</p>
+              <div class="cm-meta">Hyderabad, India · Artificial Intelligence · 380+ connections · 920 followers</div>
+              <div style="margin-top:0.35rem;"><span class="cm-badge" data-open-to="Open to work">Open to work</span></div>
+            </div>
+            <a class='cm-btn' href='/playground/careermesh/person-p-aisha-khan'>View profile</a>
+          </article>
+          <article class="cm-person" data-person-id="p-lucas-berg" data-location="Stockholm, Sweden" data-region="europe" data-industry="Financial Services" data-open-to-value="" data-connections="290" data-followers="640">
+            <div class="cm-avatar" aria-hidden="true">LB</div>
+            <div>
+              <h3 class="cm-name"><a href='/playground/careermesh/person-p-lucas-berg'>Lucas Berg</a></h3>
+              <p class="cm-headline">Product Manager · Payments</p>
+              <div class="cm-meta">Stockholm, Sweden · Financial Services · 290+ connections · 640 followers</div>
+              <div style="margin-top:0.35rem;"></div>
+            </div>
+            <a class='cm-btn' href='/playground/careermesh/person-p-lucas-berg'>View profile</a>
+          </article>
+          <article class="cm-person" data-person-id="p-mei-lin" data-location="Vancouver, British Columbia, Canada" data-region="canada" data-industry="Computer &amp; Network Security" data-open-to-value="Hiring" data-connections="310" data-followers="780">
+            <div class="cm-avatar" aria-hidden="true">ML</div>
+            <div>
+              <h3 class="cm-name"><a href='/playground/careermesh/person-p-mei-lin'>Mei Lin</a></h3>
+              <p class="cm-headline">Security Engineer · Cloud Security</p>
+              <div class="cm-meta">Vancouver, British Columbia, Canada · Computer &amp; Network Security · 310+ connections · 780 followers</div>
+              <div style="margin-top:0.35rem;"><span class="cm-badge" data-open-to="Hiring">Hiring</span></div>
+            </div>
+            <a class='cm-btn' href='/playground/careermesh/person-p-mei-lin'>View profile</a>
+          </article>
+          <article class="cm-person" data-person-id="p-james-okafor" data-location="Lagos, Nigeria" data-region="africa" data-industry="Computer Software" data-open-to-value="Open to work" data-connections="260" data-followers="1100">
+            <div class="cm-avatar" aria-hidden="true">JO</div>
+            <div>
+              <h3 class="cm-name"><a href='/playground/careermesh/person-p-james-okafor'>James Okafor</a></h3>
+              <p class="cm-headline">Backend Engineer · APIs</p>
+              <div class="cm-meta">Lagos, Nigeria · Computer Software · 260+ connections · 1100 followers</div>
+              <div style="margin-top:0.35rem;"><span class="cm-badge" data-open-to="Open to work">Open to work</span></div>
+            </div>
+            <a class='cm-btn' href='/playground/careermesh/person-p-james-okafor'>View profile</a>
+          </article>
+          <article class="cm-person" data-person-id="p-claire-dupont" data-location="Paris, France" data-region="europe" data-industry="Design" data-open-to-value="Hiring" data-connections="340" data-followers="2100">
+            <div class="cm-avatar" aria-hidden="true">CD</div>
+            <div>
+              <h3 class="cm-name"><a href='/playground/careermesh/person-p-claire-dupont'>Claire Dupont</a></h3>
+              <p class="cm-headline">UX Designer · Design Systems</p>
+              <div class="cm-meta">Paris, France · Design · 340+ connections · 2100 followers</div>
+              <div style="margin-top:0.35rem;"><span class="cm-badge" data-open-to="Hiring">Hiring</span></div>
+            </div>
+            <a class='cm-btn' href='/playground/careermesh/person-p-claire-dupont'>View profile</a>
+          </article>
+          <article class="cm-person" data-person-id="p-haruto-saito" data-location="Osaka, Japan" data-region="asia" data-industry="Software Development" data-open-to-value="" data-connections="195" data-followers="430">
+            <div class="cm-avatar" aria-hidden="true">HS</div>
+            <div>
+              <h3 class="cm-name"><a href='/playground/careermesh/person-p-haruto-saito'>Haruto Saito</a></h3>
+              <p class="cm-headline">iOS Engineer · Consumer Apps</p>
+              <div class="cm-meta">Osaka, Japan · Software Development · 195+ connections · 430 followers</div>
+              <div style="margin-top:0.35rem;"></div>
+            </div>
+            <a class='cm-btn' href='/playground/careermesh/person-p-haruto-saito'>View profile</a>
+          </article>
+          <article class="cm-person" data-person-id="p-sofia-alvarez" data-location="Bogotá, Colombia" data-region="latam" data-industry="Data &amp; Analytics" data-open-to-value="Open to work" data-connections="280" data-followers="560">
+            <div class="cm-avatar" aria-hidden="true">SA</div>
+            <div>
+              <h3 class="cm-name"><a href='/playground/careermesh/person-p-sofia-alvarez'>Sofia Alvarez</a></h3>
+              <p class="cm-headline">Data Engineer · Analytics Platforms</p>
+              <div class="cm-meta">Bogotá, Colombia · Data &amp; Analytics · 280+ connections · 560 followers</div>
+              <div style="margin-top:0.35rem;"><span class="cm-badge" data-open-to="Open to work">Open to work</span></div>
+            </div>
+            <a class='cm-btn' href='/playground/careermesh/person-p-sofia-alvarez'>View profile</a>
+          </article>
+          <article class="cm-person" data-person-id="p-ethan-wright" data-location="Edinburgh, Scotland, United Kingdom" data-region="uk" data-industry="Writing &amp; Editing" data-open-to-value="Hiring" data-connections="220" data-followers="980">
+            <div class="cm-avatar" aria-hidden="true">EW</div>
+            <div>
+              <h3 class="cm-name"><a href='/playground/careermesh/person-p-ethan-wright'>Ethan Wright</a></h3>
+              <p class="cm-headline">Technical Writer · API Docs</p>
+              <div class="cm-meta">Edinburgh, Scotland, United Kingdom · Writing &amp; Editing · 220+ connections · 980 followers</div>
+              <div style="margin-top:0.35rem;"><span class="cm-badge" data-open-to="Hiring">Hiring</span></div>
+            </div>
+            <a class='cm-btn' href='/playground/careermesh/person-p-ethan-wright'>View profile</a>
+          </article>
+          <article class="cm-person" data-person-id="p-noura-elamin" data-location="Dubai, United Arab Emirates" data-region="asia" data-industry="Human Resources" data-open-to-value="Hiring" data-connections="500" data-followers="3400">
+            <div class="cm-avatar" aria-hidden="true">NE</div>
+            <div>
+              <h3 class="cm-name"><a href='/playground/careermesh/person-p-noura-elamin'>Noura Elamin</a></h3>
+              <p class="cm-headline">Recruiter · Engineering Talent</p>
+              <div class="cm-meta">Dubai, United Arab Emirates · Human Resources · 500+ connections · 3400 followers</div>
+              <div style="margin-top:0.35rem;"><span class="cm-badge" data-open-to="Hiring">Hiring</span></div>
+            </div>
+            <a class='cm-btn' href='/playground/careermesh/person-p-noura-elamin'>View profile</a>
+          </article>
+          <article class="cm-person" data-person-id="p-oliver-hayes" data-location="Sydney, Australia" data-region="oceania" data-industry="Information Technology" data-open-to-value="Open to work" data-connections="355" data-followers="720">
+            <div class="cm-avatar" aria-hidden="true">OH</div>
+            <div>
+              <h3 class="cm-name"><a href='/playground/careermesh/person-p-oliver-hayes'>Oliver Hayes</a></h3>
+              <p class="cm-headline">SRE · Reliability Engineering</p>
+              <div class="cm-meta">Sydney, Australia · Information Technology · 355+ connections · 720 followers</div>
+              <div style="margin-top:0.35rem;"><span class="cm-badge" data-open-to="Open to work">Open to work</span></div>
+            </div>
+            <a class='cm-btn' href='/playground/careermesh/person-p-oliver-hayes'>View profile</a>
+          </article>
+          <article class="cm-person" data-person-id="p-fatima-zahra" data-location="Casablanca, Morocco" data-region="africa" data-industry="Marketing &amp; Advertising" data-open-to-value="" data-connections="240" data-followers="1300">
+            <div class="cm-avatar" aria-hidden="true">FZ</div>
+            <div>
+              <h3 class="cm-name"><a href='/playground/careermesh/person-p-fatima-zahra'>Fatima Zahra</a></h3>
+              <p class="cm-headline">Growth PM · Lifecycle Marketing</p>
+              <div class="cm-meta">Casablanca, Morocco · Marketing &amp; Advertising · 240+ connections · 1300 followers</div>
+              <div style="margin-top:0.35rem;"></div>
+            </div>
+            <a class='cm-btn' href='/playground/careermesh/person-p-fatima-zahra'>View profile</a>
+          </article>
+          <article class="cm-person" data-person-id="p-daniel-rossi" data-location="Milan, Italy" data-region="europe" data-industry="Computer Software" data-open-to-value="Open to work" data-connections="275" data-followers="490">
+            <div class="cm-avatar" aria-hidden="true">DR</div>
+            <div>
+              <h3 class="cm-name"><a href='/playground/careermesh/person-p-daniel-rossi'>Daniel Rossi</a></h3>
+              <p class="cm-headline">Full-Stack Engineer · SaaS</p>
+              <div class="cm-meta">Milan, Italy · Computer Software · 275+ connections · 490 followers</div>
+              <div style="margin-top:0.35rem;"><span class="cm-badge" data-open-to="Open to work">Open to work</span></div>
+            </div>
+            <a class='cm-btn' href='/playground/careermesh/person-p-daniel-rossi'>View profile</a>
+          </article>
+          <article class="cm-person" data-person-id="p-chloe-bennett" data-location="Austin, Texas, United States" data-region="us" data-industry="Customer Service" data-open-to-value="Hiring" data-connections="410" data-followers="560">
+            <div class="cm-avatar" aria-hidden="true">CB</div>
+            <div>
+              <h3 class="cm-name"><a href='/playground/careermesh/person-p-chloe-bennett'>Chloe Bennett</a></h3>
+              <p class="cm-headline">Customer Success · Mid-Market</p>
+              <div class="cm-meta">Austin, Texas, United States · Customer Service · 410+ connections · 560 followers</div>
+              <div style="margin-top:0.35rem;"><span class="cm-badge" data-open-to="Hiring">Hiring</span></div>
+            </div>
+            <a class='cm-btn' href='/playground/careermesh/person-p-chloe-bennett'>View profile</a>
+          </article>
+          <article class="cm-person" data-person-id="p-arjun-mehta" data-location="Pune, India" data-region="asia" data-industry="Data &amp; Analytics" data-open-to-value="" data-connections="320" data-followers="1450">
+            <div class="cm-avatar" aria-hidden="true">AM</div>
+            <div>
+              <h3 class="cm-name"><a href='/playground/careermesh/person-p-arjun-mehta'>Arjun Mehta</a></h3>
+              <p class="cm-headline">Staff Data Scientist · Forecasting</p>
+              <div class="cm-meta">Pune, India · Data &amp; Analytics · 320+ connections · 1450 followers</div>
+              <div style="margin-top:0.35rem;"></div>
+            </div>
+            <a class='cm-btn' href='/playground/careermesh/person-p-arjun-mehta'>View profile</a>
+          </article>
+          <article class="cm-person" data-person-id="p-isabel-fernandez" data-location="Madrid, Spain" data-region="europe" data-industry="Legal Services" data-open-to-value="Open to work" data-connections="185" data-followers="310">
+            <div class="cm-avatar" aria-hidden="true">IF</div>
+            <div>
+              <h3 class="cm-name"><a href='/playground/careermesh/person-p-isabel-fernandez'>Isabel Fernández</a></h3>
+              <p class="cm-headline">Legal Counsel · Commercial</p>
+              <div class="cm-meta">Madrid, Spain · Legal Services · 185+ connections · 310 followers</div>
+              <div style="margin-top:0.35rem;"><span class="cm-badge" data-open-to="Open to work">Open to work</span></div>
+            </div>
+            <a class='cm-btn' href='/playground/careermesh/person-p-isabel-fernandez'>View profile</a>
+          </article>
+          <article class="cm-person" data-person-id="p-ryan-cooper" data-location="Remote · United States" data-region="us" data-industry="Information Technology" data-open-to-value="Hiring" data-connections="390" data-followers="870">
+            <div class="cm-avatar" aria-hidden="true">RC</div>
+            <div>
+              <h3 class="cm-name"><a href='/playground/careermesh/person-p-ryan-cooper'>Ryan Cooper</a></h3>
+              <p class="cm-headline">DevOps Engineer · Cloud Infra</p>
+              <div class="cm-meta">Remote · United States · Information Technology · 390+ connections · 870 followers</div>
+              <div style="margin-top:0.35rem;"><span class="cm-badge" data-open-to="Hiring">Hiring</span></div>
+            </div>
+            <a class='cm-btn' href='/playground/careermesh/person-p-ryan-cooper'>View profile</a>
+          </article>
+          <article class="cm-person" data-person-id="p-yara-nasser" data-location="Amman, Jordan" data-region="asia" data-industry="Software Development" data-open-to-value="Open to work" data-connections="210" data-followers="480">
+            <div class="cm-avatar" aria-hidden="true">YN</div>
+            <div>
+              <h3 class="cm-name"><a href='/playground/careermesh/person-p-yara-nasser'>Yara Nasser</a></h3>
+              <p class="cm-headline">Android Engineer · Kotlin</p>
+              <div class="cm-meta">Amman, Jordan · Software Development · 210+ connections · 480 followers</div>
+              <div style="margin-top:0.35rem;"><span class="cm-badge" data-open-to="Open to work">Open to work</span></div>
+            </div>
+            <a class='cm-btn' href='/playground/careermesh/person-p-yara-nasser'>View profile</a>
+          </article>
+          <article class="cm-person" data-person-id="p-mateo-ruiz" data-location="Lima, Peru" data-region="latam" data-industry="Operations" data-open-to-value="" data-connections="160" data-followers="290">
+            <div class="cm-avatar" aria-hidden="true">MR</div>
+            <div>
+              <h3 class="cm-name"><a href='/playground/careermesh/person-p-mateo-ruiz'>Mateo Ruiz</a></h3>
+              <p class="cm-headline">Operations Analyst · Logistics</p>
+              <div class="cm-meta">Lima, Peru · Operations · 160+ connections · 290 followers</div>
+              <div style="margin-top:0.35rem;"></div>
+            </div>
+            <a class='cm-btn' href='/playground/careermesh/person-p-mateo-ruiz'>View profile</a>
+          </article>
+          <article class="cm-person" data-person-id="p-sienna-park" data-location="Seoul, South Korea" data-region="asia" data-industry="Internet" data-open-to-value="Hiring" data-connections="300" data-followers="1150">
+            <div class="cm-avatar" aria-hidden="true">SP</div>
+            <div>
+              <h3 class="cm-name"><a href='/playground/careermesh/person-p-sienna-park'>Sienna Park</a></h3>
+              <p class="cm-headline">Frontend Engineer · Accessibility</p>
+              <div class="cm-meta">Seoul, South Korea · Internet · 300+ connections · 1150 followers</div>
+              <div style="margin-top:0.35rem;"><span class="cm-badge" data-open-to="Hiring">Hiring</span></div>
+            </div>
+            <a class='cm-btn' href='/playground/careermesh/person-p-sienna-park'>View profile</a>
+          </article>
+        </section>
+        <aside class="cm-card">
+          <h3>Tips</h3>
+          <p class="cm-meta">Hidden cards use the <code>hidden</code> attribute — scrape only visible nodes or ignore <code>[hidden]</code>.</p>
+          <h3 style="margin-top:1rem;">People also viewed</h3>
+          <ul class="cm-sidebar-list">
+            <li><a href='/playground/careermesh/person-p-ava-chen'>Ava Chen</a></li>
+            <li><a href='/playground/careermesh/person-p-marcus-lee'>Marcus Lee</a></li>
+            <li><a href='/playground/careermesh/person-p-amira-hassan'>Amira Hassan</a></li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+  </div></main>
+  <script src="/assets/js/main.js"></script>
+  <script src="/assets/js/playground/careermesh-filters.js?v=3"></script>
+</body></html>

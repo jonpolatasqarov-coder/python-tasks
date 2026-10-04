@@ -1,0 +1,12 @@
+START: NewsScraper - https://quotes.toscrape.com/
+END: NewsScraper - https://quotes.toscrape.com/
+START: ProductScraper - https://books.toscrape.com/
+END: ProductScraper - https://books.toscrape.com/ - 20 products
+START: SocialScraper - https://scrapifydatalabs.com/playground/careermesh/people.html
+END: SocialScraper - https://scrapifydatalabs.com/playground/careermesh/people.html - 50 people
+START: NewsScraper - https://quotes.toscrape.com/
+END: NewsScraper - https://quotes.toscrape.com/
+START: ProductScraper - https://books.toscrape.com/
+END: ProductScraper - https://books.toscrape.com/ - 20 products
+START: SocialScraper - https://scrapifydatalabs.com/playground/careermesh/people.html
+END: SocialScraper - https://scrapifydatalabs.com/playground/careermesh/people.html - 50 people
