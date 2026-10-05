@@ -1,0 +1,25 @@
+[
+    {
+        "user": "Jon",
+        "deck": "Python OOP",
+        "results": [
+            {
+                "question": "What is a class?",
+                "correct": false
+            },
+            {
+                "question": "What is inheritance?",
+                "correct": false
+            },
+            {
+                "question": "What is polymorphism?",
+                "correct": false
+            },
+            {
+                "question": "What is encapsulation?",
+                "correct": false
+            }
+        ],
+        "start_time": "2026-10-05 16:57:44"
+    }
+]

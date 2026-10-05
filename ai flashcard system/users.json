@@ -1,0 +1,54 @@
+[
+    {
+        "name": "Jon",
+        "cards_studied": 4,
+        "correct_answers": 0,
+        "wrong_answers": 4,
+        "card_progress": {
+            "What is a class?": {
+                "attempts": 1,
+                "correct_answers": 0,
+                "success_rate": 0,
+                "repetition": {
+                    "repetitions": 0,
+                    "interval": 1,
+                    "ease_factor": 2.5,
+                    "next_review": "2026-10-06 16:57:46"
+                }
+            },
+            "What is inheritance?": {
+                "attempts": 1,
+                "correct_answers": 0,
+                "success_rate": 0,
+                "repetition": {
+                    "repetitions": 0,
+                    "interval": 1,
+                    "ease_factor": 2.5,
+                    "next_review": "2026-10-06 16:57:47"
+                }
+            },
+            "What is polymorphism?": {
+                "attempts": 1,
+                "correct_answers": 0,
+                "success_rate": 0,
+                "repetition": {
+                    "repetitions": 0,
+                    "interval": 1,
+                    "ease_factor": 2.5,
+                    "next_review": "2026-10-06 16:57:47"
+                }
+            },
+            "What is encapsulation?": {
+                "attempts": 1,
+                "correct_answers": 0,
+                "success_rate": 0,
+                "repetition": {
+                    "repetitions": 0,
+                    "interval": 1,
+                    "ease_factor": 2.5,
+                    "next_review": "2026-10-06 16:57:48"
+                }
+            }
+        }
+    }
+]
