@@ -1,0 +1,21 @@
+id,type,district,area,rooms,price,status
+1,Apartment,Yunusabad,65,2,85000,sold
+2,House,Chilanzar,120,4,150000,available
+3,Apartment,Mirzo Ulugbek,80,3,110000,sold
+4,House,Yakkasaray,180,5,240000,sold
+5,Apartment,Chilanzar,55,2,72000,available
+6,Apartment,Yunusabad,95,3,135000,sold
+7,House,Shaykhantahur,150,4,190000,available
+8,Apartment,Yakkasaray,70,2,105000,sold
+9,House,Mirzo Ulugbek,200,6,280000,sold
+10,Apartment,Chilanzar,85,3,115000,available
+11,House,Yunusabad,160,5,230000,sold
+12,Apartment,Shaykhantahur,60,2,90000,available
+13,Apartment,Yakkasaray,110,4,165000,sold
+14,House,Chilanzar,140,4,175000,available
+15,Apartment,Mirzo Ulugbek,75,3,120000,sold
+16,House,Yakkasaray,220,6,320000,sold
+17,Apartment,Yunusabad,50,1,68000,available
+18,House,Shaykhantahur,130,4,170000,sold
+19,Apartment,Chilanzar,90,3,125000,sold
+20,House,Mirzo Ulugbek,175,5,250000,available
