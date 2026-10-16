@@ -39,12 +39,16 @@ def verify_admin_password():
 
 
 library = Library()
-library.load_data()
+
+try:
+    library.load_data()
+except ValueError as error:
+    print(f"\nXATO: {error}")
+    print("JSON fayllarini tekshiring va dasturni qayta ishga tushiring.")
+    raise SystemExit(1)
+
 
 admin = Admin(999, "Administrator", "admin@library.com")
-
-
-
 
 while True:
     print("\n" + "=" * 50)
@@ -100,8 +104,8 @@ while True:
 
             print(
                 f"{book.book_id:<5}"
-                f"{book.title:<35}"
-                f"{book.author:<40}"
+                f"{book.title:<40}"
+                f"{book.author:<35}"
                 f"{status:<15}"
             )
 
@@ -116,6 +120,7 @@ while True:
         print(f"Available: {available} | Borrowed: {borrowed}")
 
         input("\nPress Enter to return to the main menu...")
+
 
 
 
@@ -212,190 +217,24 @@ while True:
             print("=" * 100)
 
             while True:
-                print("\n1. Borrow a book")
-                print("2. Search again")
+                print("\n1. Search again")
                 print("0. Back to main menu")
 
                 action = input(
                     "\nChoose an option: "
                 ).strip()
 
-                if action == "0":
+                if action == "1":
+                    break
+                elif action == "0":
                     back_to_main = True
                     break
-
-                elif action == "2":
-                    break
-
-                elif action == "1":
-                    # 1. Kitobni tanlash
-                    if len(found_books) == 1:
-                        selected_book = found_books[0]
-
-                        print(
-                            f"\nSelected book: "
-                            f"{selected_book.title}"
-                        )
-
-                    else:
-                        try:
-                            selected_id = int(
-                                input(
-                                    "Enter the book ID to borrow: "
-                                )
-                            )
-                        except ValueError:
-                            print("Please enter a valid number.")
-                            continue
-
-                        selected_book = next(
-                            (
-                                book for book in found_books
-                                if book.book_id == selected_id
-                            ),
-                            None
-                        )
-
-                        if selected_book is None:
-                            print(
-                                "Invalid ID. Choose a book "
-                                "from the search results."
-                            )
-                            continue
-
-                    # 2. Kitob mavjudligini tekshirish
-                    if not selected_book.is_available:
-                        print("This book is already borrowed.")
-                        continue
-
-                    # 3. User ID ni tekshirish
-                    while True:
-                        try:
-                            user_id = int(
-                                input("Enter your user ID: ")
-                            )
-                        except ValueError:
-                            print(
-                                "Invalid user ID. Enter a number."
-                            )
-                            continue
-
-                        user = next(
-                            (
-                                u for u in library.users
-                                if u.user_id == user_id
-                            ),
-                            None
-                        )
-
-                        if user is not None:
-                            break
-
-                        print("User not found.")
-
-                        while True:
-                            print("\n1. Try again")
-                            print("2. Search again")
-                            print("0. Back to main menu")
-
-                            retry = input(
-                                "\nChoose an option: "
-                            ).strip()
-
-                            if retry == "1":
-                                break
-                            elif retry == "2":
-                                action = "2"
-                                break
-                            elif retry == "0":
-                                action = "0"
-                                back_to_main = True
-                                break
-                            else:
-                                print(
-                                    "Invalid option. "
-                                    "Please choose 1, 2, or 0."
-                                )
-
-                        if user is not None:
-                            break
-
-                        if action in ("2", "0"):
-                            break
-
-                    if back_to_main:
-                        break
-
-                    if action == "2":
-                        break
-
-                    # 4. Ijara muddatini so'rash
-                    while True:
-                        try:
-                            borrow_days = int(
-                                input(
-                                    "Enter rental period (1-14 days): "
-                                )
-                            )
-                        except ValueError:
-                            print(
-                                "Invalid input. "
-                                "Please enter a whole number "
-                                "from 1 to 14."
-                            )
-                            continue
-
-                        if 1 <= borrow_days <= 14:
-                            break
-
-                        print(
-                            "Rental period must be between "
-                            "1 and 14 days."
-                        )
-
-                    # 5. Kitobni berish va saqlash
-                    library.borrow_book(
-                        user,
-                        selected_book,
-                        borrow_days
-                    )
-                    library.save_data()
-
-                    print("\nBorrow request processed.")
-
-                    # 6. Keyingi amal
-                    while True:
-                        print("\n1. Search again")
-                        print("0. Back to main menu")
-
-                        next_action = input(
-                            "\nChoose an option: "
-                        ).strip()
-
-                        if next_action == "1":
-                            action = "2"
-                            break
-                        elif next_action == "0":
-                            back_to_main = True
-                            break
-                        else:
-                            print(
-                                "Invalid option. "
-                                "Please choose 1 or 0."
-                            )
-
-                    break
-
                 else:
                     print("Invalid option. Please try again.")
 
             if back_to_main:
                 break
 
-            if action == "2":
-                continue
-
-            break
 
 
     elif choice == "3":
@@ -901,12 +740,19 @@ while True:
 
             admin_choice = input("Choose an option: ").strip()
 
+
             if admin_choice == "1":
                 try:
                     book_id = int(input("Enter book ID: "))
+
+                    if book_id <= 0:
+                        print("Invalid input. Book ID must be a positive integer.")
+                        continue
+
                 except ValueError:
-                    print("Invalid input. Please enter a number.")
+                    print("Invalid input. Please enter a positive integer.")
                     continue
+
 
                 if any(book.book_id == book_id for book in library.books):
                     print("Error: A book with this ID already exists.")
@@ -938,16 +784,22 @@ while True:
                 admin.add_book(library, book)
                 library.save_data()
 
+
             elif admin_choice == "2":
                 while True:
                     try:
                         user_id = int(input("Enter user ID: "))
+
+                        if user_id <= 0:
+                            print("Invalid input. User ID must be a positive integer.")
+                            continue
+
                     except ValueError:
-                        print("Invalid input. Please enter a number.")
+                        print("Invalid input. Please enter a positive integer.")
                         continue
 
                     if any(user.user_id == user_id for user in library.users):
-                        print("Error: A user with this ID already exists.")
+                        print("Error: This user ID already exists.")
                         continue
 
                     break

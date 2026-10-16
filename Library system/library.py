@@ -279,6 +279,7 @@ class Library:
 
     # -------------------- LOAD DATA --------------------
 
+
     def load_data(self):
         books_data = self._read_json_file("books.json")
         users_data = self._read_json_file("users.json")
@@ -288,10 +289,24 @@ class Library:
         books_by_id = {}
 
         try:
+
             for data in books_data:
+                book_id = data["book_id"]
+
+                if type(book_id) is not int or book_id <= 0:
+                    raise ValueError(
+                        f"Invalid book_id: {book_id!r}. "
+                        "book_id must be a positive integer."
+                    )
+
+                if book_id in books_by_id:
+                    raise ValueError(
+                        f"Duplicate book_id found: {book_id}"
+                    )
+
 
                 book = Book(
-                    data["book_id"],
+                    book_id,
                     data["title"],
                     data["author"],
                     data.get("description", ""),
@@ -305,12 +320,27 @@ class Library:
                 loaded_books.append(book)
                 books_by_id[book.book_id] = book
 
+
             for data in users_data:
+                user_id = data["user_id"]
+
+                if type(user_id) is not int or user_id <= 0:
+                    raise ValueError(
+                        f"Invalid user_id: {user_id!r}. "
+                        "user_id must be a positive integer."
+                    )
+
+                if any(user.user_id == user_id for user in loaded_users):
+                    raise ValueError(
+                        f"Duplicate user_id found: {user_id}"
+                    )
+
                 user = User(
-                    data["user_id"],
+                    user_id,
                     data["name"],
                     data["email"]
                 )
+
 
                 user.borrow_dates = {
                     int(book_id): due_date
@@ -339,7 +369,18 @@ class Library:
 
                 loaded_users.append(user)
 
-        except (KeyError, TypeError, ValueError) as error:
+        except ValueError as error:
+            logging.error("Invalid library data: %s", error)
+
+            if "Duplicate book_id found" in str(error):
+                raise
+
+            raise ValueError(
+                "The JSON data has missing or invalid fields. "
+                "Restore the files from a backup or correct them."
+            ) from error
+
+        except (KeyError, TypeError) as error:
             logging.error("Invalid library data: %s", error)
             raise ValueError(
                 "The JSON data has missing or invalid fields. "
@@ -359,12 +400,11 @@ class Library:
         for book in self.books:
             if book.book_id in borrowed_book_ids:
                 book.is_available = False
+
             elif not any(
                 book.book_id in user.borrow_dates
                 for user in self.users
             ):
-                # Faqat biror userga biriktirilmagan kitoblar
-                # bo'yicha ziddiyatni log qilamiz.
                 if not book.is_available:
                     logging.warning(
                         "Book '%s' is marked unavailable but "
