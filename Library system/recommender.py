@@ -10,24 +10,9 @@ def recommend_books(books, selected_book):
     texts = []
 
     for book in books:
-        description = getattr(book, "description", "")
+        description = getattr(book, "description", "") or ""
 
-        genre = getattr(book, "genre", [])
-        keywords = getattr(book, "keywords", [])
-
-        if isinstance(genre, str):
-            genre = [genre]
-
-        if isinstance(keywords, str):
-            keywords = [keywords]
-
-        text = " ".join([
-            book.title,
-            description,
-            " ".join(genre),
-            " ".join(keywords)
-        ])
-
+        text = f"{book.title} {description}"
         texts.append(text)
 
     vectorizer = TfidfVectorizer(

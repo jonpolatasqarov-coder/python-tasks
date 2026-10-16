@@ -79,6 +79,10 @@ while True:
 
     choice = input("\nChoose an option: ").strip()
 
+    if choice == "0":
+        print("Exiting Library Management System...")
+        library.save_data()
+        break
 
     if choice == "1":
         print("\n" + "=" * 100)
@@ -785,92 +789,217 @@ while True:
                 library.save_data()
 
 
+
             elif admin_choice == "2":
+                # 1. User ID validation
                 while True:
-                    try:
-                        user_id = int(input("Enter user ID: "))
+                    user_id_input = input(
+                        "Enter user ID (0 to cancel): "
+                    ).strip()
 
-                        if user_id <= 0:
-                            print("Invalid input. User ID must be a positive integer.")
-                            continue
+                    if user_id_input == "0":
+                        print("User creation cancelled.")
+                        break
 
-                    except ValueError:
-                        print("Invalid input. Please enter a positive integer.")
+                    if not user_id_input.isascii() or not user_id_input.isdigit():
+                        print(
+                            "Invalid ID. Enter a positive whole number."
+                        )
                         continue
 
-                    if any(user.user_id == user_id for user in library.users):
+                    user_id = int(user_id_input)
+
+                    if user_id <= 0:
+                        print("User ID must be a positive integer.")
+                        continue
+
+                    if any(
+                        user.user_id == user_id
+                        for user in library.users
+                    ):
                         print("Error: This user ID already exists.")
                         continue
 
                     break
 
+                if user_id_input == "0":
+                    continue
+
+                # 2. Username validation
                 while True:
-                    name = input("Enter user name: ").strip()
+                    name = input(
+                        "Enter username (0 to cancel): "
+                    ).strip()
+
+                    if name == "0":
+                        print("User creation cancelled.")
+                        break
 
                     if not name:
-                        print("User name cannot be empty.")
+                        print(
+                            "Username cannot be empty. "
+                            "Example: john_smith"
+                        )
+                        continue
+
+                    if len(name) < 3:
+                        print("Username must contain at least 3 characters.")
+                        continue
+
+                    if not name.isascii() or not name[0].isalpha():
+                        print(
+                            "Username must start with an English letter."
+                        )
+                        continue
+
+                    if not all(
+                        char.isalnum() or char == "_"
+                        for char in name
+                    ):
+                        print(
+                            "Username can contain only English letters, "
+                            "digits, and underscores."
+                        )
+                        continue
+
+                    if any(
+                        user.name.strip().casefold() == name.casefold()
+                        for user in library.users
+                    ):
+                        print("Error: This username is already taken.")
                         continue
 
                     break
 
-                while True:
-                    email = input("Enter user email: ").strip()
+                if name == "0":
+                    continue
 
-                    if " " in email:
-                        print("Invalid email address. Please try again.")
+                # 3. Email validation
+                while True:
+                    email = input(
+                        "Enter user email (0 to cancel): "
+                    ).strip().lower()
+
+                    if email == "0":
+                        print("User creation cancelled.")
+                        break
+
+                    if not email:
+                        print("Email cannot be empty. Example: john@gmail.com")
+                        continue
+
+                    if not email.isascii() or any(
+                        char.isspace() for char in email
+                    ):
+                        print(
+                            "Invalid email. Spaces and non-English "
+                            "characters are not allowed."
+                        )
                         continue
 
                     if email.count("@") != 1:
-                        print("Invalid email address. Please try again.")
+                        print("Invalid email format. Example: john@gmail.com")
                         continue
 
                     local_part, domain = email.split("@")
 
                     if not local_part or not domain:
-                        print("Invalid email address. Please try again.")
+                        print("Invalid email format. Example: john@gmail.com")
                         continue
 
-                    if "." not in domain:
-                        print("Invalid email address. Please try again.")
+                    if (
+                        local_part.startswith(".")
+                        or local_part.endswith(".")
+                        or ".." in local_part
+                    ):
+                        print("Invalid email format. Example: john@gmail.com")
                         continue
 
-                    if domain.startswith(".") or domain.endswith("."):
-                        print("Invalid email address. Please try again.")
-                        continue
+                    allowed_local = (
+                        "abcdefghijklmnopqrstuvwxyz"
+                        "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                        "0123456789"
+                        "._%+-"
+                    )
 
-                    if ".." in email:
-                        print("Invalid email address. Please try again.")
+                    if any(
+                        char not in allowed_local
+                        for char in local_part
+                    ):
+                        print(
+                            "Invalid email format. Example: john@gmail.com"
+                        )
                         continue
 
                     domain_parts = domain.split(".")
 
-                    if any(not part for part in domain_parts):
-                        print("Invalid email address. Please try again.")
+                    if len(domain_parts) < 2:
+                        print("Email domain must contain a dot.")
+                        continue
+
+                    if any(
+                        not part
+                        or not part[0].isalnum()
+                        or not part[-1].isalnum()
+                        or not part.isascii()
+                        or not part.replace("-", "").isalnum()
+                        for part in domain_parts
+                    ):
+                        print("Invalid email domain.")
                         continue
 
                     if len(domain_parts[-1]) < 2:
-                        print("Invalid email address. Please try again.")
+                        print(
+                            "Email extension must contain at least "
+                            "2 characters. Example: john@gmail.com"
+                        )
                         continue
 
                     if any(
                         user.email.strip().casefold() == email.casefold()
                         for user in library.users
                     ):
-                        print("Error: A user with this email already exists.")
+                        print(
+                            "Error: A user with this email already exists."
+                        )
                         continue
 
                     break
 
+                if email == "0":
+                    continue
+
+                # 4. Create and save user
                 user = User(user_id, name, email)
 
                 if admin.add_user(library, user):
                     library.save_data()
 
+
+
+
             elif admin_choice == "3":
+                print("\n--- Current Users List ---")
+
+                if library.users:
+                    for user in library.users:
+                        print(
+                            f"ID: {user.user_id} | "
+                            f"Name: {user.name} | "
+                            f"Email: {user.email}"
+                        )
+                else:
+                    print("No users found.")
+                    continue
+
                 try:
-                    user_id = int(input("Enter user ID: "))
+                    user_id = int(input("Enter user ID (0 to cancel): "))
                 except ValueError:
                     print("Invalid input. Please enter a number.")
+                    continue
+
+                if user_id == 0:
+                    print("User removal cancelled.")
                     continue
 
                 user = next(
@@ -889,6 +1018,18 @@ while True:
 
                 if removed:
                     library.save_data()
+                    print("\n--- Updated Users List ---")
+
+                    if library.users:
+                        for user in library.users:
+                            print(
+                                f"ID: {user.user_id} | "
+                                f"Name: {user.name} | "
+                                f"Email: {user.email}"
+                            )
+                    else:
+                        print("No users found.")
+
 
             elif admin_choice == "0":
                 print("Returning to main menu...")
@@ -897,15 +1038,25 @@ while True:
             else:
                 print("Invalid option. Please try again.")
 
+
     elif choice == "10":
         print("\n--- Register User ---")
 
         # 1. Username validation
         while True:
-            name = input("Enter username: ").lower()
+            name = input(
+                "Enter username (0 to cancel): "
+            ).strip()
 
-            if not name or name != name.strip() or " " in name:
-                print("Username cannot contain spaces or be empty.")
+            if name == "0":
+                print("Registration cancelled.")
+                break
+
+            if not name:
+                print(
+                    "Username cannot be empty. "
+                    "Example: john_smith"
+                )
                 continue
 
             if len(name) < 3:
@@ -913,7 +1064,10 @@ while True:
                 continue
 
             if not name.isascii() or not name[0].isalpha():
-                print("Username must start with an English letter.")
+                print(
+                    "Username must start with an English letter. "
+                    "Example: john_smith"
+                )
                 continue
 
             if not all(
@@ -922,32 +1076,53 @@ while True:
             ):
                 print(
                     "Username can contain only English letters, "
-                    "digits, and underscores."
+                    "digits, and underscores. Example: john_smith"
                 )
                 continue
 
             if any(
-                user.name.strip().lower() == name
+                user.name.strip().casefold() == name.casefold()
                 for user in library.users
             ):
                 print("This username is already taken.")
                 continue
 
             break
+
+        if name == "0":
+            continue
+
         # 2. Email validation
         while True:
-            email = input("Enter email address: ").lower()
+            email = input(
+                "Enter email address (0 to cancel): "
+            ).strip().lower()
 
-            if (
-                not email
-                or email != email.strip()
-                or any(char.isspace() for char in email)
+            if email == "0":
+                print("Registration cancelled.")
+                break
+
+            if not email:
+                print(
+                    "Email cannot be empty. "
+                    "Example: john@gmail.com"
+                )
+                continue
+
+            if not email.isascii() or any(
+                char.isspace() for char in email
             ):
-                print("Email cannot be empty or contain spaces.")
+                print(
+                    "Invalid email format. "
+                    "Example: john@gmail.com"
+                )
                 continue
 
             if email.count("@") != 1:
-                print("Invalid email format.")
+                print(
+                    "Invalid email format. "
+                    "Example: john@gmail.com"
+                )
                 continue
 
             local_part, domain = email.split("@")
@@ -957,22 +1132,71 @@ while True:
                 or not domain
                 or local_part.startswith(".")
                 or local_part.endswith(".")
-                or ".." in email
-                or "." not in domain
-                or domain.startswith(".")
-                or domain.endswith(".")
+                or ".." in local_part
             ):
-                print("Invalid email format.")
+                print(
+                    "Invalid email format. "
+                    "Example: john@gmail.com"
+                )
+                continue
+
+            allowed_local = (
+                "abcdefghijklmnopqrstuvwxyz"
+                "0123456789._%+-"
+            )
+
+            if any(
+                char not in allowed_local
+                for char in local_part
+            ):
+                print(
+                    "Invalid email format. "
+                    "Example: john@gmail.com"
+                )
+                continue
+
+            domain_parts = domain.split(".")
+
+            if len(domain_parts) < 2:
+                print(
+                    "Invalid email domain. "
+                    "Example: john@gmail.com"
+                )
                 continue
 
             if any(
-                user.email.strip().lower() == email
+                not part
+                or not part.isascii()
+                or not part[0].isalnum()
+                or not part[-1].isalnum()
+                or not part.replace("-", "").isalnum()
+                for part in domain_parts
+            ):
+                print(
+                    "Invalid email domain. "
+                    "Example: john@gmail.com"
+                )
+                continue
+
+            if len(domain_parts[-1]) < 2:
+                print(
+                    "Email extension must contain at least "
+                    "2 characters. Example: john@gmail.com"
+                )
+                continue
+
+            if any(
+                user.email.strip().casefold() == email.casefold()
                 for user in library.users
             ):
                 print("This email is already registered.")
                 continue
 
             break
+
+        if email == "0":
+            continue
+
         # 3. Generate a unique user ID
         user_id = max(
             (user.user_id for user in library.users),
@@ -991,11 +1215,3 @@ while True:
             print(f"User ID: {user_id}")
         else:
             print("Registration failed.")
-
-    elif choice == "0":
-        library.save_data()
-        print("Data saved. Goodbye!")
-        break
-
-    else:
-        print("Invalid option.")

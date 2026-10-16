@@ -4,20 +4,8 @@
         "title": "The Hobbit",
         "author": "J. R. R. Tolkien",
         "description": "A fantasy adventure following Bilbo Baggins, a comfort-loving hobbit recruited by the wizard Gandalf to accompany thirteen dwarves on a journey to reclaim their homeland and treasure from the dragon Smaug. Along the way, the travelers encounter trolls, goblins, giant spiders, elves, dangerous mountains, and riddles that test Bilbo's judgment. A mysterious ring becomes an important part of his journey. The novel explores courage, loyalty, greed, hospitality, cleverness, and personal growth, showing how an apparently ordinary character can act bravely when circumstances demand it. Its world features invented languages, legendary peoples, songs, and a richly imagined history.",
-        "genre": [
-            "Fantasy",
-            "Adventure"
-        ],
-        "keywords": [
-            "fantasy",
-            "adventure",
-            "quest",
-            "friendship",
-            "courage",
-            "dragons",
-            "mythical world",
-            "personal growth"
-        ],
+        "genre": [],
+        "keywords": [],
         "is_available": true,
         "borrow_count": 1
     },
@@ -26,43 +14,18 @@
         "title": "The Lord of the Rings",
         "author": "J. R. R. Tolkien",
         "description": "An epic high-fantasy story set in Middle-earth, where Frodo Baggins must carry the One Ring into Mordor and destroy it before Sauron can use it to dominate the free peoples. The quest involves the Fellowship, including Samwise Gamgee, Aragorn, Gandalf, Legolas, and Gimli, as their companions face treacherous journeys, war, temptation, and the fall of kingdoms. The Ring corrupts those who desire its power, making moral resistance as important as military strength. Major themes include friendship, sacrifice, courage, duty, corruption, hope, and the cost of power. The narrative combines mythology, detailed geography, ancient histories, languages, and large-scale battles.",
-        "genre": [
-            "Epic fantasy",
-            "Adventure"
-        ],
-        "keywords": [
-            "fantasy",
-            "epic quest",
-            "friendship",
-            "sacrifice",
-            "courage",
-            "dark lord",
-            "magic",
-            "middle earth",
-            "good versus evil"
-        ],
+        "genre": [],
+        "keywords": [],
         "is_available": true,
-        "borrow_count": 0
+        "borrow_count": 2
     },
     {
         "book_id": 10,
         "title": "The Time Machine",
         "author": "H. G. Wells",
         "description": "A pioneering science fiction novel in which an inventor known as the Time Traveller builds a machine that carries him into the distant future. There he encounters the Eloi, a gentle but physically vulnerable people living above ground, and the Morlocks, mysterious beings associated with the underground. Their relationship leads him to question how class divisions and social conditions might shape human evolution over immense stretches of time. The book combines time-travel adventure with social criticism and speculation about progress, labor, inequality, degeneration, and the fate of civilization. It also reflects on the difference between humanity's confidence in advancement and the unpredictable consequences of historical change.",
-        "genre": [
-            "Science fiction",
-            "Social commentary"
-        ],
-        "keywords": [
-            "science fiction",
-            "time travel",
-            "future society",
-            "evolution",
-            "class inequality",
-            "technology",
-            "civilization",
-            "speculative science"
-        ],
+        "genre": [],
+        "keywords": [],
         "is_available": true,
         "borrow_count": 1
     },
@@ -71,44 +34,18 @@
         "title": "The Martian",
         "author": "Andy Weir",
         "description": "A science fiction survival story about astronaut Mark Watney, who is stranded on Mars after his crew evacuates during a dangerous storm and mistakenly believes he has died. With limited food, damaged equipment, and no reliable way to contact Earth, he uses botany, chemistry, physics, engineering, and careful calculations to stay alive. Meanwhile, NASA engineers and his former crewmates work on ways to bring him home. The novel focuses on practical problem solving, resource management, isolation, risk assessment, human ingenuity, teamwork, and persistence in a hostile environment, with detailed attention to the constraints of spaceflight and life-support systems.",
-        "genre": [
-            "Science fiction",
-            "Survival"
-        ],
-        "keywords": [
-            "science fiction",
-            "space exploration",
-            "survival",
-            "engineering",
-            "problem solving",
-            "mars",
-            "astronaut",
-            "botany",
-            "scientific method"
-        ],
+        "genre": [],
+        "keywords": [],
         "is_available": true,
-        "borrow_count": 1
+        "borrow_count": 3
     },
     {
         "book_id": 12,
         "title": "Project Hail Mary",
         "author": "Andy Weir",
         "description": "A hard science fiction novel about Ryland Grace, a former scientist who wakes alone aboard a spacecraft far from Earth and initially cannot remember his identity or mission. As his memory returns, he learns that an astronomical phenomenon is causing stars, including the Sun, to lose energy and that his mission may determine whether Earth survives. He relies on experiments, biology, chemistry, physics, engineering, and mathematical reasoning to investigate the threat. The story combines space exploration, first contact, scientific problem solving, isolation, sacrifice, humor, and cooperation across radically different forms of life.",
-        "genre": [
-            "Science fiction",
-            "Space adventure"
-        ],
-        "keywords": [
-            "science fiction",
-            "space exploration",
-            "survival",
-            "scientific problem solving",
-            "astronaut",
-            "alien life",
-            "chemistry",
-            "physics",
-            "cooperation"
-        ],
+        "genre": [],
+        "keywords": [],
         "is_available": true,
         "borrow_count": 0
     },
@@ -117,21 +54,8 @@
         "title": "The Silent Patient",
         "author": "Alex Michaelides",
         "description": "A psychological thriller about Alicia Berenson, a painter who stops speaking after her husband Gabriel is found murdered. Theo Faber, a psychotherapist fascinated by her case, seeks to work at the secure psychiatric facility where Alicia lives and tries to understand her silence. The investigation brings together therapy sessions, diary entries, private relationships, and revelations about the people surrounding the couple. The story uses a limited and potentially unreliable perspective to build uncertainty about motives and the events leading to the murder. Its subjects include obsession, guilt, betrayal, trauma, secrecy, perception, and the gap between outward appearances and hidden psychological conflicts. Suspense depends on the gradual reinterpretation of earlier clues.",
-        "genre": [
-            "Psychological thriller",
-            "Mystery"
-        ],
-        "keywords": [
-            "psychological thriller",
-            "mystery",
-            "therapy",
-            "silence",
-            "obsession",
-            "trauma",
-            "unreliable narrator",
-            "murder",
-            "plot twist"
-        ],
+        "genre": [],
+        "keywords": [],
         "is_available": true,
         "borrow_count": 1
     },
@@ -140,21 +64,8 @@
         "title": "The Name of the Wind",
         "author": "Patrick Rothfuss",
         "description": "An epic fantasy novel framed as the account of Kvothe, a gifted musician and magician who recounts his life to a chronicler at an inn where he is living under an assumed identity. His story moves from childhood among traveling performers through a devastating loss and a period of poverty to his difficult entry into a university where students study arcane principles. He searches for knowledge about the mysterious Chandrian while navigating tuition, rivalry, friendship, music, and dangerous secrets. The novel combines a coming-of-age story, magical education, folklore, and a mystery about reputation. Its themes include memory, storytelling, ambition, grief, knowledge, and the difference between a legendary public image and a complicated private life.",
-        "genre": [
-            "Fantasy",
-            "Coming-of-age"
-        ],
-        "keywords": [
-            "fantasy",
-            "magic",
-            "coming of age",
-            "music",
-            "university",
-            "mystery",
-            "adventure",
-            "storytelling",
-            "personal identity"
-        ],
+        "genre": [],
+        "keywords": [],
         "is_available": true,
         "borrow_count": 0
     },
@@ -163,21 +74,8 @@
         "title": "The Handmaid's Tale",
         "author": "Margaret Atwood",
         "description": "A dystopian novel narrated by Offred, a woman forced into reproductive servitude in the Republic of Gilead, a theocratic dictatorship formed after a political coup and a fertility crisis. Women are denied independence, separated by rigid social roles, monitored, and subjected to state-controlled rules governing their bodies and relationships. Offred's memories of her former family and life outside Gilead contrast with her constrained daily existence. Through personal recollection and psychological tension, the novel examines reproductive autonomy, authoritarian religion, gender hierarchy, surveillance, language, memory, complicity, and resistance. It shows how institutions can normalize oppression through ritual, fear, social division, and the gradual removal of civil rights.",
-        "genre": [
-            "Dystopian fiction",
-            "Political fiction"
-        ],
-        "keywords": [
-            "dystopia",
-            "totalitarianism",
-            "women rights",
-            "reproductive control",
-            "surveillance",
-            "religious extremism",
-            "resistance",
-            "freedom",
-            "identity"
-        ],
+        "genre": [],
+        "keywords": [],
         "is_available": true,
         "borrow_count": 0
     },
@@ -186,21 +84,8 @@
         "title": "Sapiens",
         "author": "Yuval Noah Harari",
         "description": "A popular history of Homo sapiens that traces the species from early hunter-gatherer societies to modern global civilization. Yuval Noah Harari organizes the narrative around major transformations, including the Cognitive Revolution, the Agricultural Revolution, the development of states and empires, and the Scientific Revolution. He considers how shared stories, religions, legal systems, money, and political institutions allow large numbers of strangers to cooperate. The book also discusses agriculture, inequality, imperial expansion, capitalism, scientific knowledge, and the environmental consequences of human activity. Its main subjects are human evolution, anthropology, cultural change, collective beliefs, economic organization, and the question of whether technological progress has necessarily improved human well-being.",
-        "genre": [
-            "Popular history",
-            "Anthropology"
-        ],
-        "keywords": [
-            "human history",
-            "anthropology",
-            "human evolution",
-            "civilization",
-            "culture",
-            "religion",
-            "agriculture",
-            "economics",
-            "social cooperation"
-        ],
+        "genre": [],
+        "keywords": [],
         "is_available": true,
         "borrow_count": 0
     },
@@ -209,46 +94,18 @@
         "title": "The Psychology of Money",
         "author": "Morgan Housel",
         "description": "A personal finance book explaining how behavior and personal experience often influence financial outcomes more than technical intelligence alone. Through short stories and historical examples, Morgan Housel explores the roles of luck, risk, compounding, saving, greed, fear, patience, and expectations in money decisions. He distinguishes earning wealth from keeping it and argues for financial habits that can survive uncertainty, including reasonable spending, a margin of safety, and long-term thinking. The book also examines how people with different backgrounds can reach different conclusions about the same financial event. Its focus is behavioral finance rather than step-by-step stock selection, with an emphasis on humility, resilience, independence, and defining what enough means.",
-        "genre": [
-            "Personal finance",
-            "Behavioral economics"
-        ],
-        "keywords": [
-            "self development",
-            "personal finance",
-            "behavioral finance",
-            "money habits",
-            "decision making",
-            "risk",
-            "investing",
-            "patience",
-            "long term thinking",
-            "financial independence"
-        ],
+        "genre": [],
+        "keywords": [],
         "is_available": true,
-        "borrow_count": 0
+        "borrow_count": 1
     },
     {
         "book_id": 21,
         "title": "Dune",
         "author": "Frank Herbert",
         "description": "An epic science fiction novel set in a far-future interstellar empire, focused on the desert planet Arrakis, the only source of the spice melange. This substance is central to imperial economics and space navigation, making control of the planet politically decisive. Paul Atreides arrives with his noble family, but betrayal forces him into the desert and into contact with the Fremen, Arrakis's native people. The story interweaves dynastic politics, ecology, religion, resource scarcity, prophecy, military strategy, and the dangers of charismatic leadership. Its desert setting shapes culture and survival, while its conflicts explore how environmental systems, economic power, and belief can transform entire civilizations.",
-        "genre": [
-            "Science fiction",
-            "Political epic"
-        ],
-        "keywords": [
-            "science fiction",
-            "desert planet",
-            "ecology",
-            "politics",
-            "religion",
-            "power",
-            "resource scarcity",
-            "prophecy",
-            "imperialism",
-            "survival"
-        ],
+        "genre": [],
+        "keywords": [],
         "is_available": true,
         "borrow_count": 0
     },
@@ -257,21 +114,8 @@
         "title": "Foundation",
         "author": "Isaac Asimov",
         "description": "A science fiction novel set in a vast Galactic Empire whose decline is predicted by Hari Seldon, a mathematician who develops psychohistory, a method for estimating the large-scale behavior of populations. To reduce the coming period of chaos, Seldon establishes the Foundation on the remote planet Terminus, where scholars are tasked with preserving scientific knowledge. Over time, the Foundation faces political pressure, religious manipulation, trade competition, and military threats from neighboring powers. Rather than focusing on one hero's journey, the novel follows historical turning points and the strategic responses of successive generations. Its themes include the rise and fall of empires, historical prediction, institutions, political strategy, technological knowledge, and the limits of individual control over large social forces.",
-        "genre": [
-            "Science fiction",
-            "Political drama"
-        ],
-        "keywords": [
-            "science fiction",
-            "galactic empire",
-            "future history",
-            "mathematics",
-            "politics",
-            "civilization",
-            "social change",
-            "strategy",
-            "scientific prediction"
-        ],
+        "genre": [],
+        "keywords": [],
         "is_available": true,
         "borrow_count": 0
     },
@@ -280,21 +124,8 @@
         "title": "1984",
         "author": "George Orwell",
         "description": "A dystopian political novel set in Oceania, a totalitarian state governed by the Party and the omnipresent image of Big Brother. Winston Smith works at the Ministry of Truth, where records are altered so that the past always supports the government's current claims. Citizens face surveillance, propaganda, censorship, manipulated language, and punishment for independent thought. Winston's private doubts and forbidden relationship with Julia become attempts to preserve a private self under an invasive political system. The novel explores authoritarianism, truth, memory, historical revision, psychological control, and the fragility of individual freedom. It asks how power can shape reality when institutions control both information and the words available to describe it.",
-        "genre": [
-            "Dystopian fiction",
-            "Political fiction"
-        ],
-        "keywords": [
-            "dystopia",
-            "totalitarianism",
-            "surveillance",
-            "propaganda",
-            "censorship",
-            "freedom",
-            "political language",
-            "psychological control",
-            "resistance"
-        ],
+        "genre": [],
+        "keywords": [],
         "is_available": true,
         "borrow_count": 0
     },
@@ -303,21 +134,8 @@
         "title": "Brave New World",
         "author": "Aldous Huxley",
         "description": "A dystopian novel about a future society that maintains order through artificial reproduction, caste conditioning, consumerism, casual pleasure, and a drug called soma that suppresses distress. People are engineered and trained for predetermined social roles, while literature, deep emotional attachments, and independent thought are discouraged. Bernard Marx feels uncomfortable with the values of his society and eventually encounters John, who was raised outside its controlled civilization. Their experiences expose the costs hidden beneath apparent comfort and stability. The novel explores technological control, freedom, happiness, conformity, reproduction, consumer culture, and the conflict between personal meaning and social efficiency. Its central warning concerns a population kept obedient through manufactured satisfaction rather than constant visible violence.",
-        "genre": [
-            "Dystopian fiction",
-            "Science fiction"
-        ],
-        "keywords": [
-            "dystopia",
-            "social conditioning",
-            "technology",
-            "consumerism",
-            "genetic engineering",
-            "conformity",
-            "freedom",
-            "pleasure",
-            "individuality"
-        ],
+        "genre": [],
+        "keywords": [],
         "is_available": true,
         "borrow_count": 0
     },
@@ -326,22 +144,8 @@
         "title": "Frankenstein",
         "author": "Mary Shelley",
         "description": "A Gothic science fiction novel about Victor Frankenstein, a young natural philosopher who discovers a way to animate a being assembled from body parts. Horrified by the result, Victor abandons the creature, which must learn language and human customs while facing fear and rejection from the people it meets. Its desire for companionship and justice turns into a tragic conflict with its creator. The novel examines the ethics of scientific ambition, responsibility for one's creations, isolation, prejudice, revenge, and the need for human connection. Its layered narrative, bleak landscapes, and unsettling atmosphere blend horror with philosophical questions about what makes someone human and who bears responsibility for suffering.",
-        "genre": [
-            "Gothic fiction",
-            "Science fiction",
-            "Horror"
-        ],
-        "keywords": [
-            "gothic",
-            "science fiction",
-            "scientific ambition",
-            "creation",
-            "responsibility",
-            "isolation",
-            "prejudice",
-            "ethics",
-            "revenge"
-        ],
+        "genre": [],
+        "keywords": [],
         "is_available": true,
         "borrow_count": 0
     },
@@ -350,21 +154,8 @@
         "title": "Dracula",
         "author": "Bram Stoker",
         "description": "A Gothic horror novel told through journals, letters, and recorded documents that describe the efforts of Count Dracula to extend his influence from Transylvania to England. The story begins when solicitor Jonathan Harker visits Dracula's remote castle and discovers increasingly disturbing signs that his host is not an ordinary nobleman. After Dracula travels to England, a group including Mina Harker, Lucy Westenra, Dr. John Seward, Quincey Morris, Arthur Holmwood, and Professor Abraham Van Helsing investigates the supernatural threat. The novel combines vampire folklore, suspense, invasion anxiety, science, superstition, and Victorian social concerns. Its central conflict pits collective investigation and courage against predatory secrecy and an ancient supernatural power.",
-        "genre": [
-            "Gothic horror",
-            "Supernatural fiction"
-        ],
-        "keywords": [
-            "gothic horror",
-            "vampires",
-            "supernatural",
-            "fear",
-            "good versus evil",
-            "mystery",
-            "invasion",
-            "Victorian society",
-            "suspense"
-        ],
+        "genre": [],
+        "keywords": [],
         "is_available": true,
         "borrow_count": 0
     },
@@ -373,22 +164,8 @@
         "title": "Deep Work",
         "author": "Cal Newport",
         "description": "A productivity book that defines deep work as focused, distraction-free concentration on cognitively demanding tasks and contrasts it with shallow activities that can be performed with little sustained attention. Cal Newport argues that deep work helps people learn difficult skills, solve complex problems, and produce valuable results in a distracted economy. The book discusses routines for protecting concentration, scheduling demanding work, reducing digital interruptions, and making deliberate use of technology. It also considers attention residue, professional skill development, and the value of regular practice. Its central themes include sustained focus, meaningful work, discipline, digital habits, and designing a schedule that supports rather than fragments attention.",
-        "genre": [
-            "Self-development",
-            "Productivity"
-        ],
-        "keywords": [
-            "self development",
-            "productivity",
-            "focus",
-            "concentration",
-            "discipline",
-            "skill development",
-            "deep work",
-            "digital distraction",
-            "time management",
-            "deliberate practice"
-        ],
+        "genre": [],
+        "keywords": [],
         "is_available": true,
         "borrow_count": 0
     },
@@ -397,22 +174,8 @@
         "title": "Atomic Habits",
         "author": "James Clear",
         "description": "A practical self-improvement book about how small, repeated actions can accumulate into significant long-term changes. James Clear explains habits through a four-stage pattern of cue, craving, response, and reward, then presents four laws for behavior change: make a habit obvious, attractive, easy, and satisfying. The book emphasizes environmental design, identity-based habits, tracking, repetition, and systems rather than relying on motivation or ambitious goals alone. It also discusses how to make unwanted behaviors harder to perform and how to recover when routines break down. Its focus is behavioral change through consistent processes, incremental improvement, and the connection between everyday actions and the kind of person someone becomes.",
-        "genre": [
-            "Self-development",
-            "Behavioral psychology"
-        ],
-        "keywords": [
-            "self development",
-            "habit formation",
-            "behavior change",
-            "discipline",
-            "personal growth",
-            "routines",
-            "consistency",
-            "behavioral psychology",
-            "small improvements",
-            "goal setting"
-        ],
+        "genre": [],
+        "keywords": [],
         "is_available": true,
         "borrow_count": 0
     },
@@ -421,22 +184,8 @@
         "title": "Thinking, Fast and Slow",
         "author": "Daniel Kahneman",
         "description": "A psychology and behavioral economics book describing two broad modes of thought: fast, intuitive responses and slower, more effortful reasoning. Daniel Kahneman explores how mental shortcuts help people make quick judgments but can also lead to predictable errors. Topics include anchoring, availability, overconfidence, loss aversion, framing effects, risk perception, and judgments about probability. The book also distinguishes immediate experience from the way experiences are later remembered and evaluated. Drawing on research in judgment and decision-making, it examines the limits of intuition in everyday choices, business, and public policy. Its central themes are cognitive bias, uncertainty, rational judgment, human attention, and the conditions under which careful reasoning can improve decisions.",
-        "genre": [
-            "Psychology",
-            "Behavioral economics"
-        ],
-        "keywords": [
-            "psychology",
-            "behavioral economics",
-            "decision making",
-            "cognitive bias",
-            "critical thinking",
-            "risk perception",
-            "intuition",
-            "reasoning",
-            "judgment",
-            "human behavior"
-        ],
+        "genre": [],
+        "keywords": [],
         "is_available": true,
         "borrow_count": 1
     },
@@ -445,22 +194,8 @@
         "title": "The Alchemist",
         "author": "Paulo Coelho",
         "description": "A philosophical adventure novel about Santiago, an Andalusian shepherd who dreams of treasure near the Egyptian pyramids and travels from Spain across North Africa to search for it. Along the way, he meets a king, a crystal merchant, an English traveler, and an alchemist, each of whom affects how he understands risk, purpose, and personal growth. His journey through unfamiliar places forces him to pay attention to experience, make difficult choices, and reconsider what the treasure means. The novel combines travel, spiritual symbolism, romance, and allegorical storytelling. Its recurring themes include destiny, courage, listening to one's aspirations, learning through setbacks, and recognizing the value of the journey itself.",
-        "genre": [
-            "Philosophical fiction",
-            "Adventure"
-        ],
-        "keywords": [
-            "personal growth",
-            "self development",
-            "purpose",
-            "destiny",
-            "self discovery",
-            "spirituality",
-            "adventure",
-            "courage",
-            "dreams",
-            "personal transformation"
-        ],
+        "genre": [],
+        "keywords": [],
         "is_available": true,
         "borrow_count": 1
     },
@@ -469,22 +204,8 @@
         "title": "Crime and Punishment",
         "author": "Fyodor Dostoevsky",
         "description": "A psychological and philosophical novel set in Saint Petersburg, following Rodion Raskolnikov, an impoverished former student who murders a pawnbroker and attempts to justify the crime through a theory about exceptional individuals and moral limits. Instead of finding freedom, he experiences fear, illness, alienation, and mounting guilt. His relationships with Sonia Marmeladova, his family, and the investigating magistrate Porfiry Petrovich intensify his inner conflict. The novel examines poverty, pride, moral responsibility, rationalization, suffering, confession, and the possibility of redemption. Much of its tension comes from Raskolnikov's divided consciousness and the clash between abstract intellectual theories and the emotional and ethical consequences of an actual crime.",
-        "genre": [
-            "Psychological fiction",
-            "Philosophical fiction"
-        ],
-        "keywords": [
-            "psychology",
-            "morality",
-            "guilt",
-            "crime",
-            "punishment",
-            "poverty",
-            "alienation",
-            "free will",
-            "redemption",
-            "philosophy"
-        ],
+        "genre": [],
+        "keywords": [],
         "is_available": true,
         "borrow_count": 3
     },
@@ -493,22 +214,8 @@
         "title": "The Great Gatsby",
         "author": "F. Scott Fitzgerald",
         "description": "A modernist novel set among wealthy communities on Long Island and in New York City during the American Jazz Age. Nick Carraway narrates the story of Jay Gatsby, a mysterious millionaire whose lavish parties conceal his hope of reuniting with Daisy Buchanan, a woman he loved years earlier. Gatsby's carefully constructed identity and romantic dream collide with class privilege, old money, social status, and the reckless behavior of the wealthy. The novel explores the American Dream, ambition, nostalgia, idealization, materialism, and moral carelessness. Symbols such as the green light and the valley of ashes contrast Gatsby's imagined future with the social realities and inequalities surrounding him.",
-        "genre": [
-            "Literary fiction",
-            "Modernist fiction"
-        ],
-        "keywords": [
-            "american dream",
-            "wealth",
-            "social class",
-            "ambition",
-            "love",
-            "status",
-            "materialism",
-            "nostalgia",
-            "identity",
-            "social criticism"
-        ],
+        "genre": [],
+        "keywords": [],
         "is_available": true,
         "borrow_count": 0
     },
@@ -517,21 +224,8 @@
         "title": "The Hitchhiker's Guide to the Galaxy",
         "author": "Douglas Adams",
         "description": "A comic science fiction novel in which Arthur Dent escapes Earth's destruction when his friend Ford Prefect reveals that he is an alien researcher traveling the galaxy. Arthur joins Ford aboard a spacecraft and encounters eccentric alien societies, improbable machines, bureaucratic absurdities, and questions about the scale and meaning of existence. The story uses satire, absurdist humor, wordplay, and deliberately ridiculous situations to examine humanity's assumptions about intelligence, authority, progress, and importance. A fictional electronic guide provides advice to interstellar travelers while the characters move through a universe that is vast, chaotic, and rarely concerned with human expectations. Its distinctive mix of cosmic adventure and philosophical comedy makes it unlike conventional survival-oriented science fiction.",
-        "genre": [
-            "Comic science fiction",
-            "Satire"
-        ],
-        "keywords": [
-            "science fiction",
-            "space travel",
-            "absurdist humor",
-            "satire",
-            "alien civilizations",
-            "artificial intelligence",
-            "existential questions",
-            "bureaucracy",
-            "adventure"
-        ],
+        "genre": [],
+        "keywords": [],
         "is_available": true,
         "borrow_count": 0
     },
@@ -540,84 +234,26 @@
         "title": "The Road",
         "author": "Cormac McCarthy",
         "description": "A post-apocalyptic literary novel following an unnamed father and his young son as they travel on foot through a devastated landscape after an unexplained catastrophe has destroyed much of civilization. They move through burned forests, abandoned towns, and empty houses while searching for food, warmth, and safety. Scarcity, cold, illness, violence, and the danger posed by desperate survivors make ordinary decisions matters of life and death. The father's determination to protect his child provides the story's emotional center. The novel examines parental love, moral responsibility, memory, hope, and the effort to preserve compassion after social institutions have collapsed. Its sparse prose and bleak atmosphere emphasize vulnerability and the struggle to remain humane.",
-        "genre": [
-            "Post-apocalyptic fiction",
-            "Literary fiction"
-        ],
-        "keywords": [
-            "post apocalyptic",
-            "survival",
-            "father son relationship",
-            "hope",
-            "morality",
-            "scarcity",
-            "human cruelty",
-            "compassion",
-            "journey",
-            "civilization collapse"
-        ],
+        "genre": [],
+        "keywords": [],
         "is_available": true,
-        "borrow_count": 0
+        "borrow_count": 2
     },
     {
         "book_id": 35,
         "title": "The Shining",
         "author": "Stephen King",
         "description": "A supernatural horror novel about Jack Torrance, a writer and recovering alcoholic who takes a winter caretaker job at the isolated Overlook Hotel in the Colorado mountains. He moves into the hotel with his wife Wendy and their young son Danny, whose psychic ability, known as the shining, allows him to perceive disturbing presences and events. Once heavy snow cuts the family off from the outside world, the hotel's violent past and supernatural influence intensify Jack's instability. The novel combines a haunted setting with psychological horror and family conflict. Its themes include addiction, isolation, parental responsibility, anger, trauma, and the danger of unresolved personal problems turning into violence.",
-        "genre": [
-            "Horror",
-            "Psychological thriller"
-        ],
-        "keywords": [
-            "horror",
-            "haunted hotel",
-            "supernatural",
-            "psychological thriller",
-            "isolation",
-            "addiction",
-            "family conflict",
-            "trauma",
-            "fear",
-            "mental deterioration"
-        ],
-        "is_available": true,
-        "borrow_count": 0
-    },
-    {
-        "book_id": 78,
-        "title": "Python dasturlash asoslari",
-        "author": "Anvar Narzullayev",
-        "description": "Learning book about programming.",
         "genre": [],
         "keywords": [],
         "is_available": true,
-        "borrow_count": 0
+        "borrow_count": 1
     },
     {
-        "book_id": 90,
-        "title": "sdckns 34232 323e 2keajfhqp24uo r",
-        "author": "qn34piruq 3f9q3brufbq3rp9f u3rf",
-        "description": "qp3o4uq9fu bf34f",
-        "genre": [],
-        "keywords": [],
-        "is_available": true,
-        "borrow_count": 0
-    },
-    {
-        "book_id": 3432,
-        "title": "lwedhwejd",
-        "author": "ljwdwd",
-        "description": "wkfjhwe",
-        "genre": [],
-        "keywords": [],
-        "is_available": true,
-        "borrow_count": 0
-    },
-    {
-        "book_id": 345,
-        "title": "messi",
-        "author": "sed",
-        "description": "sd",
+        "book_id": 1,
+        "title": "1",
+        "author": "1",
+        "description": "1",
         "genre": [],
         "keywords": [],
         "is_available": true,

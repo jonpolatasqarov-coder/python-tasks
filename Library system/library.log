@@ -1,7 +1,5 @@
-2026-10-16 13:00:11,215 - WARNING - users.json is empty. Using an empty list.
-2026-10-16 13:00:11,216 - INFO - Loaded 29 books and 0 users.
-2026-10-16 13:06:56,004 - WARNING - users.json is empty. Using an empty list.
-2026-10-16 13:06:56,004 - INFO - Loaded 29 books and 0 users.
-2026-10-16 13:06:58,735 - INFO - Library data saved successfully.
-2026-10-16 13:14:12,191 - INFO - Loaded 29 books and 0 users.
-2026-10-16 13:14:14,477 - INFO - Library data saved successfully.
+2026-10-16 16:59:14,160 - INFO - Loaded 26 books and 5 users.
+2026-10-16 17:00:47,943 - INFO - Loaded 26 books and 5 users.
+2026-10-16 17:00:49,319 - INFO - Library data saved successfully.
+2026-10-16 17:01:01,102 - INFO - Loaded 26 books and 5 users.
+2026-10-16 17:01:03,953 - INFO - Library data saved successfully.
