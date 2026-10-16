@@ -5,5 +5,6 @@ class User:
         self.email = email
         self.borrowed_books = []
         self.borrow_dates = {}
+        self.borrow_start_dates = {}
 
     

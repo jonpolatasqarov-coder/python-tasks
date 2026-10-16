@@ -1,11 +1,7 @@
-2026-10-02 18:33:42,912 - INFO - User 'Jonpolat' borrowed book 'The Count of Monte Cristo'.
-2026-10-02 18:34:35,391 - INFO - User 'Jonpolat' returned book 'The Count of Monte Cristo'.
-2026-10-02 18:38:52,140 - INFO - User 'Jonpolat' borrowed book 'Dune'.
-2026-10-02 18:43:20,652 - WARNING - Overdue email sent to jonpolatasqarov@gmail.com for book 'Dune'.
-2026-10-02 18:43:45,546 - INFO - User 'Jonpolat' returned book 'Dune'.
-2026-10-02 19:55:50,887 - INFO - User 'Jonpolat' borrowed book 'Dune'.
-2026-10-02 20:07:14,859 - INFO - User 'Jonpolat' borrowed book 'The Count of Monte Cristo'.
-2026-10-02 20:09:59,645 - INFO - User 'Jonpolat' returned book 'The Count of Monte Cristo'.
-2026-10-02 20:13:01,601 - INFO - User 'Jonpolat' extended book 'Dune' until 2026-10-23.
-2026-10-02 20:46:44,298 - INFO - User 'messi' borrowed book 'The Martian'.
-2026-10-02 20:49:09,001 - INFO - User 'Jonpolat' borrowed book 'Dune'.
+2026-10-16 13:00:11,215 - WARNING - users.json is empty. Using an empty list.
+2026-10-16 13:00:11,216 - INFO - Loaded 29 books and 0 users.
+2026-10-16 13:06:56,004 - WARNING - users.json is empty. Using an empty list.
+2026-10-16 13:06:56,004 - INFO - Loaded 29 books and 0 users.
+2026-10-16 13:06:58,735 - INFO - Library data saved successfully.
+2026-10-16 13:14:12,191 - INFO - Loaded 29 books and 0 users.
+2026-10-16 13:14:14,477 - INFO - Library data saved successfully.
