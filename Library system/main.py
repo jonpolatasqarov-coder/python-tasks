@@ -7,11 +7,13 @@ import json
 import hashlib
 import hmac
 from datetime import date, datetime, timedelta
+from pathlib import Path
 
+BASE_DIR = Path(__file__).resolve().parent
 
 def verify_admin_password():
     try:
-        with open("admin.json", "r", encoding="utf-8") as file:
+        with open(BASE_DIR / "admin.json", "r", encoding="utf-8") as file:
             admin_data = json.load(file)
 
         salt = bytes.fromhex(admin_data["salt"])

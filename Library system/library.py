@@ -4,10 +4,12 @@ from pathlib import Path
 from datetime import date, timedelta
 from book import Book
 from user import User
+from pathlib import Path
 
+BASE_DIR = Path(__file__).resolve().parent
 
 logging.basicConfig(
-    filename="library.log",
+    filename=BASE_DIR / "library.log",
     level=logging.INFO,
     format="%(asctime)s - %(levelname)s - %(message)s"
 )
@@ -207,7 +209,7 @@ class Library:
     # -------------------- JSON HELPERS --------------------
 
     def _read_json_file(self, filename):
-        path = Path(filename)
+        path = BASE_DIR / filename
 
         try:
             with path.open("r", encoding="utf-8") as file:
@@ -259,10 +261,10 @@ class Library:
             })
 
         try:
-            with open("books.json", "w", encoding="utf-8") as file:
+            with (BASE_DIR / "books.json").open("w", encoding="utf-8") as file:
                 json.dump(books_data, file, indent=4, ensure_ascii=False)
 
-            with open("users.json", "w", encoding="utf-8") as file:
+            with (BASE_DIR / "users.json").open("w", encoding="utf-8") as file:
                 json.dump(users_data, file, indent=4, ensure_ascii=False)
 
             logging.info("Library data saved successfully.")
