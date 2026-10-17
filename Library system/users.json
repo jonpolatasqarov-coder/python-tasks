@@ -1,40 +1,8 @@
 [
     {
-        "user_id": 8,
-        "name": "joih",
-        "email": "kujbjf@gfchg.com",
-        "borrowed_books": [],
-        "borrow_dates": {},
-        "borrow_start_dates": {}
-    },
-    {
-        "user_id": 9,
-        "name": "john",
-        "email": "secfjhg@gmail.vom",
-        "borrowed_books": [],
-        "borrow_dates": {},
-        "borrow_start_dates": {}
-    },
-    {
-        "user_id": 76,
-        "name": "hjjn",
-        "email": "john@gmail.com",
-        "borrowed_books": [],
-        "borrow_dates": {},
-        "borrow_start_dates": {}
-    },
-    {
-        "user_id": 77,
-        "name": "jhuk",
-        "email": "sad@email.c",
-        "borrowed_books": [],
-        "borrow_dates": {},
-        "borrow_start_dates": {}
-    },
-    {
-        "user_id": 78,
-        "name": "hvg",
-        "email": "joh@gmail.com",
+        "user_id": 1,
+        "name": "Jonpolat",
+        "email": "jonpolat@gmail.com",
         "borrowed_books": [],
         "borrow_dates": {},
         "borrow_start_dates": {}

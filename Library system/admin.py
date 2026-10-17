@@ -1,4 +1,3 @@
-
 from user import User
 
 
@@ -9,7 +8,6 @@ class Admin(User):
     def add_book(self, library, book):
         library.add_book(book)
         print(f"Book '{book.title}' added successfully.")
-
 
     def add_user(self, library, user):
         if library.add_user(user):
@@ -54,5 +52,3 @@ class Admin(User):
         library.users.remove(user)
         print(f"User '{user.name}' removed successfully.")
         return True
-
-

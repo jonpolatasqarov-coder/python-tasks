@@ -1,4 +1,3 @@
-
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
@@ -19,8 +18,12 @@ def recommend_books(books, selected_book):
         stop_words="english",
         ngram_range=(1, 2)
     )
-
-    matrix = vectorizer.fit_transform(texts)
+    
+    try:
+        matrix = vectorizer.fit_transform(texts)
+    except ValueError:
+        return []
+    
     similarities = cosine_similarity(matrix)
 
     selected_index = next(

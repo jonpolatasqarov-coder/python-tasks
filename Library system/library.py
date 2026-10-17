@@ -2,7 +2,6 @@ import json
 import logging
 from pathlib import Path
 from datetime import date, timedelta
-
 from book import Book
 from user import User
 
@@ -13,7 +12,6 @@ logging.basicConfig(
     format="%(asctime)s - %(levelname)s - %(message)s"
 )
 
-
 class Library:
     def __init__(self):
         self.books = []
@@ -23,8 +21,6 @@ class Library:
 
     def add_book(self, book):
         self.books.append(book)
-
-
 
     def add_user(self, user):
         if not user.name.strip():
@@ -47,8 +43,6 @@ class Library:
         self.users.append(user)
         logging.info("User '%s' added successfully.", user.name)
         return True
-
-
 
     def find_book(self, book_id):
         return next(
@@ -304,14 +298,11 @@ class Library:
                         f"Duplicate book_id found: {book_id}"
                     )
 
-
                 book = Book(
                     book_id,
                     data["title"],
                     data["author"],
-                    data.get("description", ""),
-                    genre=data.get("genre", []),
-                    keywords=data.get("keywords", [])
+                    data.get("description", "")
                 )
 
                 book.is_available = data.get("is_available", True)
@@ -419,7 +410,6 @@ class Library:
         )
 
     # -------------------- OVERDUE BOOKS --------------------
-
     def check_overdue_books(self):
         today = date.today()
         overdue_books = []
@@ -476,13 +466,6 @@ class Library:
         print(f"Total overdue books: {len(overdue_books)}")
 
     # -------------------- STATISTICS --------------------
-
-
-
-
-
-
-
     def most_read_book(self):
         borrowed_books = [
             book for book in self.books
@@ -507,8 +490,6 @@ class Library:
                     f"Most borrowed book: {book.title} "
                     f"({book.borrow_count} borrows)"
                 )
-
-
 
     def least_borrowed_book(self):
         borrowed_books = [
@@ -538,7 +519,3 @@ class Library:
 
         for book in least_read:
             print(f"- {book.title}")
-
-
-
-
