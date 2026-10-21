@@ -1,18 +1,56 @@
-Tesla rented for 6 day(s).
-KTM rented for 5 day(s).
-Ducati rented for 2 day(s). Total: $140.00
-Ducati has been returned.
-Ducati rented for 1 day(s). Total: $70.00
-Ducati has been returned.
-Tesla has been returned.
-Ducati rented for 2 day(s). Total: $140.00
-Ducati has been returned.
-KTM has been returned.
-Ducati rented for 2 day(s). Total: $126.00
-Ducati has been returned.
-KTM rented for 4 day(s). Total: $220.00
-KTM has been returned.
-Kawasaki rented for 1111 day(s). Total: $55550.00
-Kawasaki has been returned.
- Ducati rented for 3 day(s). Total: $189.00
-Ducati has been returned.
+Customer ID: 4 | Name: The Weeknd We | Phone: +998 93-345-45-23 | Vehicle: KTM (Bike) | Rental days: 2 | Start date: 2026-10-20 17:31:14 | Return date: 2026-10-22 17:31:14 | Total: $110.00
+Customer ID: 5 | Name: Drake Aubrey | Phone: +998 45-345-45-56 | Vehicle: Kawasaki (Bike) | Rental days: 12 | Start date: 2026-10-20 17:31:52 | Return date: 2026-11-01 17:31:52 | Total: $600.00
+Customer ID: 1 | Name: Telba Telbayev | Phone: +998 99-123-45-67 | Vehicle: Mercedes (Car) | Rental days: 12 | Start date: 2026-10-20 17:45:10 | Return date: 2026-11-01 17:45:10 | Total: $1080.00
+Vehicle: Mercedes | Customer ID: 1 | Customer: Telba Telbayev | Actual return date: 2026-10-20 17:53:40
+Vehicle: KTM | Customer ID: 4 | Customer: The Weeknd We | Actual return date: 2026-10-20 17:54:33
+Vehicle: Kawasaki | Customer ID: 5 | Customer: Drake Aubrey | Actual return date: 2026-10-20 17:54:40
+Customer ID: 3 | Name: Qobil Rahmonov | Phone: +998 34-567-89-01 | Vehicle: Harley (Bike) | Rental days: 3 | Start date: 2026-10-20 17:56:36 | Return date: 2026-10-23 17:56:36 | Total: $216.00
+Vehicle: Harley | Customer ID: 3 | Customer: Qobil Rahmonov | Actual return date: 2026-10-20 17:57:06
+Customer ID: 1 | Name: Telba Telbayev | Phone: +998 99-123-45-67 | Vehicle: Ducati (Bike) | Rental days: 14 | Start date: 2026-10-20 18:08:55 | Return date: 2026-11-03 18:08:55 | Total: $882.00
+Customer ID: 1 | Name: Telba Telbayev | Phone: +998 99-123-45-67 | Vehicle: BMW (Car) | Rental days: 1 | Start date: 2026-10-20 18:11:33 | Return date: 2026-10-21 18:11:33 | Total: $80.00
+Vehicle: BMW | Customer ID: 1 | Customer: Telba Telbayev | Actual return date: 2026-10-20 18:11:56
+Vehicle: Ducati | Customer ID: 1 | Customer: Telba Telbayev | Actual return date: 2026-10-20 18:12:05
+Customer ID: 1 | Name: Telba Telbayev | Phone: +998 99-123-45-67 | Vehicle: BMW (Car) | Rental days: 1 | Start date: 2026-10-20 18:12:23 | Return date: 2026-10-21 18:12:23 | Total: $80.00
+Vehicle: BMW | Customer ID: 1 | Customer: Telba Telbayev | Actual return date: 2026-10-20 18:12:39
+Customer ID: 1 | Name: Telba Telbayev | Phone: +998 99-123-45-67 | Vehicle: BMW (Car) | Rental days: 1 | Start date: 2026-10-20 18:13:13 | Return date: 2026-10-21 18:13:13 | Total: $64.00
+Vehicle: BMW | Customer ID: 1 | Customer: Telba Telbayev | Actual return date: 2026-10-20 18:13:18
+Customer ID: 1 | Name: Telba Telbayev | Phone: +998 99-123-45-67 | Vehicle: KTM (Bike) | Rental days: 1 | Start date: 2026-10-20 18:23:15 | Return date: 2026-10-21 18:23:15 | Total: $55.00
+Customer ID: 1 | Name: Telba Telbayev | Phone: +998 99-123-45-67 | Vehicle: Ducati (Bike) | Rental days: 2 | Start date: 2026-10-20 18:24:12 | Return date: 2026-10-22 18:24:12 | Total: $140.00
+Customer ID: 1 | Name: Asqarov Jonpo'lat | Phone: +998 12-345-67-89 | Vehicle: Yamaha (Bike) | Rental days: 1 | Start date: 2026-10-20 18:26:15 | Return date: 2026-10-21 18:26:15 | Total: $30.00
+Vehicle: Ducati | Customer ID: 1 | Customer: Telba Telbayev | Actual return date: 2026-10-20 18:26:47
+Vehicle: KTM | Customer ID: 1 | Customer: Telba Telbayev | Actual return date: 2026-10-20 18:26:53
+Vehicle: Yamaha | Customer ID: 1 | Customer: Asqarov Jonpo'lat | Actual return date: 2026-10-20 18:27:00
+Customer ID: 1 | Name: Asqarov Jonpo'lat | Phone: +998 12-345-67-89 | Vehicle: Yamaha (Bike) | Rental days: 1 | Start date: 2026-10-20 18:27:10 | Return date: 2026-10-21 18:27:10 | Total: $30.00
+Vehicle: Yamaha | Customer ID: 1 | Customer: Asqarov Jonpo'lat | Actual return date: 2026-10-20 18:27:17
+Customer ID: 1 | Name: Asqarov Jonpo'lat | Phone: +998 12-345-67-89 | Vehicle: Yamaha (Bike) | Rental days: 1 | Start date: 2026-10-20 18:27:43 | Return date: 2026-10-21 18:27:43 | Total: $30.00
+Vehicle: Yamaha | Customer ID: 1 | Customer: Asqarov Jonpo'lat | Actual return date: 2026-10-20 18:27:55
+Customer ID: 1 | Name: Asqarov Jonpo'lat | Phone: +998 12-345-67-89 | Vehicle: Yamaha (Bike) | Rental days: 1 | Start date: 2026-10-20 18:28:35 | Return date: 2026-10-21 18:28:35 | Total: $27.00
+Vehicle: Yamaha | Customer ID: 1 | Customer: Asqarov Jonpo'lat | Actual return date: 2026-10-20 18:29:15
+Customer ID: 1 | Name: Asqarov Jonpo'lat | Phone: +998 12-345-67-89 | Vehicle: Yamaha (Bike) | Rental days: 1 | Start date: 2026-10-20 18:30:17 | Return date: 2026-10-21 18:30:17 | Total: $30.00
+Vehicle: Yamaha | Customer ID: 1 | Customer: Asqarov Jonpo'lat | Actual return date: 2026-10-20 18:30:22
+Customer ID: 4 | Name: Drake Aubrey | Phone: +998 45-345-45-56 | Vehicle: Ducati (Bike) | Rental days: 1 | Start date: 2026-10-21 12:38:31 | Return date: 2026-10-22 12:38:31 | Total: $70.00
+Vehicle: Ducati | Customer ID: 4 | Customer: Drake Aubrey | Actual return date: 2026-10-21 12:38:48
+Customer ID: 4 | Name: Drake Aubrey | Phone: +998 45-345-45-56 | Vehicle: Ducati (Bike) | Rental days: 1 | Start date: 2026-10-21 12:38:56 | Return date: 2026-10-22 12:38:56 | Total: $70.00
+Vehicle: Ducati | Customer ID: 4 | Customer: Drake Aubrey | Actual return date: 2026-10-21 12:39:03
+Customer ID: 4 | Name: Drake Aubrey | Phone: +998 45-345-45-56 | Vehicle: Ducati (Bike) | Rental days: 2 | Start date: 2026-10-21 12:39:20 | Return date: 2026-10-23 12:39:20 | Total: $140.00
+Vehicle: Ducati | Customer ID: 4 | Customer: Drake Aubrey | Actual return date: 2026-10-21 12:39:27
+Customer ID: 4 | Name: Drake Aubrey | Phone: +998 45-345-45-56 | Vehicle: Ducati (Bike) | Rental days: 1 | Start date: 2026-10-21 12:39:40 | Return date: 2026-10-22 12:39:40 | Total: $63.00
+Vehicle: Ducati | Customer ID: 4 | Customer: Drake Aubrey | Actual return date: 2026-10-21 12:39:56
+Customer ID: 1 | Name: Asqarov Jonpo'lat | Phone: +998 12-345-67-89 | Vehicle: Ducati (Bike) | Rental days: 1 | Start date: 2026-10-21 12:40:10 | Return date: 2026-10-22 12:40:10 | Total: $70.00
+Vehicle: Ducati | Customer ID: 1 | Customer: Asqarov Jonpo'lat | Actual return date: 2026-10-21 12:40:23
+Customer ID: 1 | Name: Asqarov Jonpo'lat | Phone: +998 12-345-67-89 | Vehicle: Ducati (Bike) | Rental days: 1 | Start date: 2026-10-21 12:40:32 | Return date: 2026-10-22 12:40:32 | Total: $70.00
+Vehicle: Ducati | Customer ID: 1 | Customer: Asqarov Jonpo'lat | Actual return date: 2026-10-21 12:40:53
+Customer ID: 1 | Name: Asqarov Jonpo'lat | Phone: +998 12-345-67-89 | Vehicle: Ducati (Bike) | Rental days: 1 | Start date: 2026-10-21 12:41:03 | Return date: 2026-10-22 12:41:03 | Total: $70.00
+Vehicle: Ducati | Customer ID: 1 | Customer: Asqarov Jonpo'lat | Actual return date: 2026-10-21 12:41:12
+Customer ID: 1 | Name: Asqarov Jonpo'lat | Phone: +998 12-345-67-89 | Vehicle: Ducati (Bike) | Rental days: 1 | Start date: 2026-10-21 12:41:25 | Return date: 2026-10-22 12:41:25 | Total: $63.00
+Customer ID: 1 | Name: Asqarov Jonpo'lat | Phone: +998 12-345-67-89 | Vehicle: Yamaha (Bike) | Rental days: 1 | Start date: 2026-10-21 12:43:12 | Return date: 2026-10-22 12:43:12 | Total: $30.00
+Vehicle: Ducati | Customer ID: 1 | Customer: Asqarov Jonpo'lat | Actual return date: 2026-10-21 12:43:17
+Vehicle: Yamaha | Customer ID: 1 | Customer: Asqarov Jonpo'lat | Actual return date: 2026-10-21 12:43:22
+Customer ID: 1 | Name: Asqarov Jonpo'lat | Phone: +998 12-345-67-89 | Vehicle: Yamaha (Bike) | Rental days: 1 | Start date: 2026-10-21 12:43:34 | Return date: 2026-10-22 12:43:34 | Total: $30.00
+Vehicle: Yamaha | Customer ID: 1 | Customer: Asqarov Jonpo'lat | Actual return date: 2026-10-21 12:43:40
+Customer ID: 1 | Name: Asqarov Jonpo'lat | Phone: +998 12-345-67-89 | Vehicle: Ducati (Bike) | Rental days: 1 | Start date: 2026-10-21 12:49:16 | Return date: 2026-10-22 12:49:16 | Total: $70.00
+Vehicle: Ducati | Customer ID: 1 | Customer: Asqarov Jonpo'lat | Actual return date: 2026-10-21 12:49:29
+Customer ID: 1 | Name: Asqarov Jonpo'lat | Phone: +998 12-345-67-89 | Vehicle: Ducati (Bike) | Rental days: 1 | Start date: 2026-10-21 12:49:54 | Return date: 2026-10-22 12:49:54 | Total: $70.00
+Vehicle: Ducati | Customer ID: 1 | Customer: Asqarov Jonpo'lat | Actual return date: 2026-10-21 12:50:00
+Customer ID: 1 | Name: Asqarov Jonpo'lat | Phone: +998 12-345-67-89 | Vehicle: BMW (Car) | Rental days: 1 | Start date: 2026-10-21 12:57:07 | Return date: 2026-10-22 12:57:07 | Total: $80.00
+Vehicle: BMW | Customer ID: 1 | Customer: Asqarov Jonpo'lat | Actual return date: 2026-10-21 13:00:05

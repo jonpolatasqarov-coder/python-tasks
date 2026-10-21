@@ -1,0 +1,53 @@
+[
+    {
+        "customer_id": 1,
+        "name": "Asqarov Jonpo'lat",
+        "phone": "+998 12-345-67-89",
+        "rental_count": 14,
+        "vehicle_rental_counts": {
+            "Yamaha": 7,
+            "Ducati": 6,
+            "BMW": 1
+        },
+        "used_discounts": {
+            "Yamaha": true,
+            "Ducati": true
+        }
+    },
+    {
+        "customer_id": 2,
+        "name": "Qobil Rahmonov",
+        "phone": "+998 34-567-89-01",
+        "rental_count": 0,
+        "vehicle_rental_counts": {},
+        "used_discounts": {}
+    },
+    {
+        "customer_id": 3,
+        "name": "The Weeknd We",
+        "phone": "+998 93-345-45-23",
+        "rental_count": 0,
+        "vehicle_rental_counts": {},
+        "used_discounts": {}
+    },
+    {
+        "customer_id": 4,
+        "name": "Drake Aubrey",
+        "phone": "+998 45-345-45-56",
+        "rental_count": 4,
+        "vehicle_rental_counts": {
+            "Ducati": 4
+        },
+        "used_discounts": {
+            "Ducati": true
+        }
+    },
+    {
+        "customer_id": 5,
+        "name": "Thom Yorke",
+        "phone": "+998 11-111-11-11",
+        "rental_count": 0,
+        "vehicle_rental_counts": {},
+        "used_discounts": {}
+    }
+]

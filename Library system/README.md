@@ -9,3 +9,5 @@ Tasklar:
 6.	CLI interfeys bilan kitob qidirish, ro‘yxatlash, ijaraga olish menyularini yarating.
 7.	Kitoblar bo‘yicha statistikani ko‘rsatadigan method: eng ko‘p o‘qilgan, eng kam ijaraga olingan.
 8.	Admin klassi orqali yangi kitoblar qo‘shish, foydalanuvchilarni boshqarish imkonini bering.
+
+admin panel parol:12345678

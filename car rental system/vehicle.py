@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 
- 
+
 class Vehicle(ABC):
     def __init__(self, name, price_per_day):
         self.name = name

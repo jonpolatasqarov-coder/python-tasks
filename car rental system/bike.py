@@ -1,12 +1,12 @@
 from vehicle import Vehicle
- 
+
 
 class Bike(Vehicle):
     def rent(self, days):
-        if days <= 0:
-            print("Invalid number of rental days.")
+        if days <= 0 or days > 14:
+            print("Rental period must be between 1 and 14 days.")
             return False
-        
+
         if not self.is_available:
             print(f"{self.name} is not available.")
             return False
@@ -24,11 +24,11 @@ class Bike(Vehicle):
         self.is_available = True
         print(f"{self.name} has been returned.")
         return True
-    
-    def calculate_rent(self, days):
+
+    def calculate_rent(self, days, customer_rental_count=0):
         total = self.price_per_day * days
 
-        if self.rental_count > 3:
+        if customer_rental_count >= 3:
             total *= 0.9
 
         return total
