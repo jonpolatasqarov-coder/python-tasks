@@ -314,7 +314,6 @@ while True:
         fleet.return_vehicle(name, customer_id)
 
 
-
     elif choice == "4":
         while True:
             print("\n╔══════════════════════════════════════════╗")
@@ -326,16 +325,13 @@ while True:
             print("║  0. ↩️  Back                              ║")
             print("╚══════════════════════════════════════════╝")
 
-            search_choice = input("\nChoose an option (0 to go back): ").strip()
+            search_choice = input("\nChoose an option: ").strip()
 
             if search_choice == "0":
                 break
 
             elif search_choice == "1":
-                name = input("Enter vehicle name (0 to go back): ").strip()
-
-                if name == "0":
-                    continue
+                name = input("Enter vehicle name: ").strip()
 
                 vehicle = fleet.search_by_name(name)
 
@@ -347,21 +343,20 @@ while True:
                     print("╠════════════════════════════════════════════════════╣")
                     print("║ Name                    Type      Price   Available║")
                     print("╠════════════════════════════════════════════════════╣")
+
                     print(
                         f"║ {vehicle.name:<25}"
                         f"{type(vehicle).__name__:<9}"
                         f"${vehicle.price_per_day:<7.2f}"
                         f"{status:<9}║"
                     )
+
                     print("╚════════════════════════════════════════════════════╝")
                 else:
                     print("\n❌ Vehicle not found.")
 
             elif search_choice == "2":
-                vehicle_type = input("Enter vehicle type (0 to go back): ").strip()
-
-                if vehicle_type == "0":
-                    continue
+                vehicle_type = input("Enter vehicle type: ").strip()
 
                 results = fleet.search_by_type(vehicle_type)
 
@@ -374,6 +369,7 @@ while True:
 
                     for vehicle in results:
                         status = "✓ Yes" if vehicle.is_available else "✗ No"
+
                         print(
                             f"║ {vehicle.name:<25}"
                             f"{type(vehicle).__name__:<9}"
@@ -382,22 +378,13 @@ while True:
                         )
 
                     print("╚════════════════════════════════════════════════════╝")
+
                 else:
                     print("\n❌ No vehicles found.")
 
             elif search_choice == "3":
-                price_input = input("Enter maximum price (0 to go back): ").strip()
-
-                if price_input == "0":
-                    continue
-
                 try:
-                    max_price = float(price_input)
-
-                    if max_price < 0:
-                        print("Price cannot be negative.")
-                        continue
-
+                    max_price = float(input("Enter maximum price: ").strip())
                 except ValueError:
                     print("Please enter a valid price.")
                     continue
@@ -413,6 +400,7 @@ while True:
 
                     for vehicle in results:
                         status = "✓ Yes" if vehicle.is_available else "✗ No"
+
                         print(
                             f"║ {vehicle.name:<25}"
                             f"{type(vehicle).__name__:<9}"
@@ -421,12 +409,9 @@ while True:
                         )
 
                     print("╚════════════════════════════════════════════════════╝")
+
                 else:
                     print("\n❌ No vehicles found.")
-
-            else:
-                print("Invalid option. Please choose 0, 1, 2, or 3.")
-
 
     elif choice == "5":
         while True:
@@ -439,19 +424,11 @@ while True:
 
             name_parts = name.split()
 
-            if (
-                len(name_parts) >= 2
-                and all(
-                    part.replace("'", "").replace("‘", "").replace("’", "").isalpha()
-                    for part in name_parts
-                )
-            ):
+            if len(name_parts) >= 2 and all(part.isalpha() for part in name_parts):
                 name = " ".join(name_parts).title()
                 break
 
-            print(
-                "Invalid name. Enter first and last name using letters only."
-            )
+            print("Please enter both first name and last name.")
 
         if name == "0":
             continue
@@ -486,7 +463,6 @@ while True:
 
         if phone == "0":
             continue
-
 
 
     else:
