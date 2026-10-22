@@ -1,48 +1,36 @@
+
 class Room:
-    def __init__(self, room_number, price, amenities, location):
+    def __init__(self, room_number, room_type, price, amenities, location):
         self.room_number = room_number
+        self.room_type = room_type
         self.price = price
         self.amenities = amenities
         self.location = location
         self.booked_days = []
+        self.is_available = True
 
     def get_room_type(self):
-        return "Room"
+        return self.room_type
+
 
 class StandardRoom(Room):
-    def __init__(self, room_number, location):
+    def __init__(self, room_number, room_type, price, amenities, location):
         super().__init__(
-            room_number,
-            50,
-            ["Wi-Fi", "TV"],
-            location
+            room_number, room_type, price, amenities, location
         )
 
-    def get_room_type(self):
-        return "Standard"
 
 class DeluxeRoom(Room):
-    def __init__(self, room_number, location):
+    def __init__(self, room_number, room_type, price, amenities, location):
         super().__init__(
-            room_number,
-            80,
-            ["Wi-Fi", "TV", "Mini Bar"],
-            location
+            room_number, room_type, price, amenities, location
         )
 
-    def get_room_type(self):
-        return "Deluxe"
 
 class SuiteRoom(Room):
-    def __init__(self, room_number, location):
+    def __init__(self, room_number, room_type, price, amenities, location):
         super().__init__(
-            room_number,
-            120,
-            ["Wi-Fi", "TV", "Mini Bar", "Jacuzzi"],
-            location
+            room_number, room_type, price, amenities, location
         )
-
-    def get_room_type(self):
-        return "Suite"
 
     

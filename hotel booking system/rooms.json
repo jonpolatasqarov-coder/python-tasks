@@ -1,0 +1,301 @@
+[
+    {
+        "room_number": 101,
+        "room_type": "Standard Single",
+        "price": 45,
+        "amenities": [
+            "Wi-Fi",
+            "TV",
+            "Air Conditioning",
+            "Work Desk"
+        ],
+        "location": "1st Floor",
+        "is_available": true
+    },
+    {
+        "room_number": 102,
+        "room_type": "Standard Single",
+        "price": 45,
+        "amenities": [
+            "Wi-Fi",
+            "TV",
+            "Air Conditioning",
+            "Work Desk"
+        ],
+        "location": "1st Floor",
+        "is_available": true
+    },
+    {
+        "room_number": 103,
+        "room_type": "Standard Single",
+        "price": 45,
+        "amenities": [
+            "Wi-Fi",
+            "TV",
+            "Air Conditioning",
+            "Work Desk"
+        ],
+        "location": "1st Floor",
+        "is_available": true
+    },
+    {
+        "room_number": 201,
+        "room_type": "Standard Double",
+        "price": 70,
+        "amenities": [
+            "Wi-Fi",
+            "TV",
+            "Air Conditioning",
+            "Queen Bed",
+            "Work Desk"
+        ],
+        "location": "2nd Floor",
+        "is_available": true
+    },
+    {
+        "room_number": 202,
+        "room_type": "Standard Double",
+        "price": 70,
+        "amenities": [
+            "Wi-Fi",
+            "TV",
+            "Air Conditioning",
+            "Queen Bed",
+            "Work Desk"
+        ],
+        "location": "2nd Floor",
+        "is_available": true
+    },
+    {
+        "room_number": 203,
+        "room_type": "Standard Double",
+        "price": 70,
+        "amenities": [
+            "Wi-Fi",
+            "TV",
+            "Air Conditioning",
+            "Queen Bed",
+            "Work Desk"
+        ],
+        "location": "2nd Floor",
+        "is_available": true
+    },
+    {
+        "room_number": 204,
+        "room_type": "Standard Double",
+        "price": 70,
+        "amenities": [
+            "Wi-Fi",
+            "TV",
+            "Air Conditioning",
+            "Queen Bed",
+            "Work Desk"
+        ],
+        "location": "2nd Floor",
+        "is_available": true
+    },
+    {
+        "room_number": 301,
+        "room_type": "Deluxe Double",
+        "price": 100,
+        "amenities": [
+            "Wi-Fi",
+            "Smart TV",
+            "Air Conditioning",
+            "Mini Bar",
+            "Coffee Machine",
+            "City View"
+        ],
+        "location": "3rd Floor",
+        "is_available": true
+    },
+    {
+        "room_number": 302,
+        "room_type": "Deluxe Double",
+        "price": 100,
+        "amenities": [
+            "Wi-Fi",
+            "Smart TV",
+            "Air Conditioning",
+            "Mini Bar",
+            "Coffee Machine",
+            "City View"
+        ],
+        "location": "3rd Floor",
+        "is_available": true
+    },
+    {
+        "room_number": 303,
+        "room_type": "Deluxe Double",
+        "price": 100,
+        "amenities": [
+            "Wi-Fi",
+            "Smart TV",
+            "Air Conditioning",
+            "Mini Bar",
+            "Coffee Machine",
+            "City View"
+        ],
+        "location": "3rd Floor",
+        "is_available": true
+    },
+    {
+        "room_number": 401,
+        "room_type": "Twin Room",
+        "price": 85,
+        "amenities": [
+            "Wi-Fi",
+            "TV",
+            "Air Conditioning",
+            "Two Single Beds",
+            "Work Desk"
+        ],
+        "location": "4th Floor",
+        "is_available": true
+    },
+    {
+        "room_number": 402,
+        "room_type": "Twin Room",
+        "price": 85,
+        "amenities": [
+            "Wi-Fi",
+            "TV",
+            "Air Conditioning",
+            "Two Single Beds",
+            "Work Desk"
+        ],
+        "location": "4th Floor",
+        "is_available": true
+    },
+    {
+        "room_number": 403,
+        "room_type": "Twin Room",
+        "price": 85,
+        "amenities": [
+            "Wi-Fi",
+            "TV",
+            "Air Conditioning",
+            "Two Single Beds",
+            "Work Desk"
+        ],
+        "location": "4th Floor",
+        "is_available": true
+    },
+    {
+        "room_number": 501,
+        "room_type": "Junior Suite",
+        "price": 150,
+        "amenities": [
+            "Wi-Fi",
+            "Smart TV",
+            "Air Conditioning",
+            "Mini Bar",
+            "King Bed",
+            "Living Area",
+            "Bathtub"
+        ],
+        "location": "5th Floor",
+        "is_available": true
+    },
+    {
+        "room_number": 502,
+        "room_type": "Junior Suite",
+        "price": 150,
+        "amenities": [
+            "Wi-Fi",
+            "Smart TV",
+            "Air Conditioning",
+            "Mini Bar",
+            "King Bed",
+            "Living Area",
+            "Bathtub"
+        ],
+        "location": "5th Floor",
+        "is_available": true
+    },
+    {
+        "room_number": 601,
+        "room_type": "Executive Suite",
+        "price": 220,
+        "amenities": [
+            "Wi-Fi",
+            "Smart TV",
+            "Air Conditioning",
+            "Mini Bar",
+            "King Bed",
+            "Separate Living Room",
+            "Bathtub",
+            "Room Service"
+        ],
+        "location": "6th Floor",
+        "is_available": true
+    },
+    {
+        "room_number": 602,
+        "room_type": "Executive Suite",
+        "price": 220,
+        "amenities": [
+            "Wi-Fi",
+            "Smart TV",
+            "Air Conditioning",
+            "Mini Bar",
+            "King Bed",
+            "Separate Living Room",
+            "Bathtub",
+            "Room Service"
+        ],
+        "location": "6th Floor",
+        "is_available": true
+    },
+    {
+        "room_number": 701,
+        "room_type": "Presidential Suite",
+        "price": 450,
+        "amenities": [
+            "Wi-Fi",
+            "Smart TV",
+            "Air Conditioning",
+            "Private Balcony",
+            "Mini Bar",
+            "King Bed",
+            "Separate Living Room",
+            "Jacuzzi",
+            "Dining Area",
+            "VIP Room Service"
+        ],
+        "location": "7th Floor",
+        "is_available": true
+    },
+    {
+        "room_number": 801,
+        "room_type": "Family Room",
+        "price": 130,
+        "amenities": [
+            "Wi-Fi",
+            "Smart TV",
+            "Air Conditioning",
+            "One King Bed",
+            "Two Single Beds",
+            "Mini Fridge",
+            "Family Seating Area"
+        ],
+        "location": "8th Floor",
+        "is_available": true
+    },
+    {
+        "room_number": 802,
+        "room_type": "Family Room",
+        "price": 130,
+        "amenities": [
+            "Wi-Fi",
+            "Smart TV",
+            "Air Conditioning",
+            "One King Bed",
+            "Two Single Beds",
+            "Mini Fridge",
+            "Family Seating Area"
+        ],
+        "location": "8th Floor",
+        "is_available": true
+    }
+]

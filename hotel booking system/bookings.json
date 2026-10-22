@@ -1,0 +1,72 @@
+[
+    {
+        "customer_id": 1,
+        "room_number": 802,
+        "check_in": "2026-10-18T00:00:00",
+        "check_out": "2026-10-24T00:00:00",
+        "total_price": 260,
+        "refund_amount": 208.0,
+        "is_cancelled": true,
+        "is_completed": false
+    },
+    {
+        "customer_id": 1,
+        "room_number": 303,
+        "check_in": "2026-10-18T00:00:00",
+        "check_out": "2026-10-23T00:00:00",
+        "total_price": 100,
+        "refund_amount": 80.0,
+        "is_cancelled": true,
+        "is_completed": false
+    },
+    {
+        "customer_id": 1,
+        "room_number": 301,
+        "check_in": "2026-10-17T00:00:00",
+        "check_out": "2026-10-23T00:00:00",
+        "total_price": 500,
+        "refund_amount": 72.0,
+        "is_cancelled": true,
+        "is_completed": false
+    },
+    {
+        "customer_id": 1,
+        "room_number": 303,
+        "check_in": "2026-10-22T00:00:00",
+        "check_out": "2026-10-26T00:00:00",
+        "total_price": 360.0,
+        "refund_amount": 288.0,
+        "is_cancelled": true,
+        "is_completed": false
+    },
+    {
+        "customer_id": 2,
+        "room_number": 802,
+        "check_in": "2026-10-21T00:00:00",
+        "check_out": "2026-10-24T00:00:00",
+        "total_price": 390,
+        "refund_amount": 208.0,
+        "is_cancelled": true,
+        "is_completed": false
+    },
+    {
+        "customer_id": 1,
+        "room_number": 801,
+        "check_in": "2026-10-20T00:00:00",
+        "check_out": "2026-10-22T00:00:00",
+        "total_price": 117.0,
+        "refund_amount": 0.0,
+        "is_cancelled": false,
+        "is_completed": true
+    },
+    {
+        "customer_id": 3,
+        "room_number": 701,
+        "check_in": "2026-10-22T00:00:00",
+        "check_out": "2026-10-26T00:00:00",
+        "total_price": 1800,
+        "refund_amount": 0.0,
+        "is_cancelled": false,
+        "is_completed": false
+    }
+]

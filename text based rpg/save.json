@@ -1,0 +1,23 @@
+{
+    "player": {
+        "name": "Hero",
+        "health": 90,
+        "max_health": 100,
+        "strength": 20,
+        "defense": 10,
+        "state": "HealthyState",
+        "inventory": []
+    },
+    "enemy": {
+        "name": "Goblin",
+        "health": 60,
+        "max_health": 60,
+        "strength": 15,
+        "defense": 5
+    },
+    "quest": {
+        "quest_type": "explore zone",
+        "target": "Dark Forest",
+        "completed": false
+    }
+}

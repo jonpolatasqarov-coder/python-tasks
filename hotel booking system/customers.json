@@ -1,0 +1,23 @@
+[
+    {
+        "customer_id": 1,
+        "name": "Jonpo'Lat",
+        "phone": "123456789",
+        "is_vip": true,
+        "total_nights": 15
+    },
+    {
+        "customer_id": 2,
+        "name": "Memati",
+        "phone": "987654321",
+        "is_vip": false,
+        "total_nights": 1
+    },
+    {
+        "customer_id": 3,
+        "name": "Cleopatra",
+        "phone": "998955555555",
+        "is_vip": false,
+        "total_nights": 0
+    }
+]
