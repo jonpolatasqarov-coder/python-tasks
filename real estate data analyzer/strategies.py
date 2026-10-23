@@ -1,6 +1,9 @@
+
 class FilterStrategy:
     def filter(self, df):
-        raise NotImplementedError
+        raise NotImplementedError(
+            "Subclasses must implement filter()"
+        )
 
 
 class PriceFilter(FilterStrategy):
@@ -21,11 +24,12 @@ class AreaFilter(FilterStrategy):
 
 class DistrictFilter(FilterStrategy):
     def __init__(self, district):
-        self.district = district
+        self.district = district.strip()
 
     def filter(self, df):
         return df[
-            df["district"].str.lower() == self.district.lower()
+            df["district"].astype(str).str.strip().str.casefold()
+            == self.district.casefold()
         ]
 
 
@@ -35,3 +39,16 @@ class RoomFilter(FilterStrategy):
 
     def filter(self, df):
         return df[df["rooms"] == self.rooms]
+
+
+class CombinedFilter(FilterStrategy):
+    def __init__(self, *strategies):
+        self.strategies = strategies
+
+    def filter(self, df):
+        result = df.copy()
+
+        for strategy in self.strategies:
+            result = strategy.filter(result)
+
+        return result
