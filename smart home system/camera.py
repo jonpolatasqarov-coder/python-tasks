@@ -1,3 +1,4 @@
+
 from device import Device
 
 
@@ -6,13 +7,20 @@ class Camera(Device):
         super().__init__(name, power)
 
     def turn_on(self):
-        self.is_on = True
-        print(f"{self.name} is recording.")
+        if not self.is_on:
+            self.start_timer()
+            print(f"{self.name} turned ON.")
 
     def turn_off(self):
-        self.is_on = False
-        print(f"{self.name} stopped recording.")
+        if self.is_on:
+            self.stop_timer()
+            print(f"{self.name} turned OFF.")
 
     def status_report(self):
         status = "ON" if self.is_on else "OFF"
-        return f"{self.name}: {status}"
+        working_time = self.format_working_time()
+
+        return (
+            f"{self.name}: {status}, "
+            f"Working time: {working_time}"
+        )

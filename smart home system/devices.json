@@ -2,35 +2,48 @@
     {
         "name": "Living Room Light",
         "type": "Light",
-        "is_on": true
+        "is_on": false,
+        "working_hours": 0.1058608239226871,
+        "turned_on_at": null
     },
     {
         "name": "Living Room Thermostat",
         "type": "Thermostat",
-        "is_on": true,
-        "temperature": 26.0,
+        "is_on": false,
+        "working_hours": 0.08689175883928935,
+        "turned_on_at": null,
+        "temperature": 25.0,
         "temperature_history": [
-            35.0,
-            12.0,
-            14.0,
-            23.0,
+            25.0,
+            30.0,
+            29.0,
             31.0,
-            26.0
+            29.0,
+            30.0,
+            31.0,
+            33.0,
+            25.0
         ]
     },
     {
         "name": "Security Camera",
         "type": "Camera",
-        "is_on": true
+        "is_on": false,
+        "working_hours": 0.02657271213001675,
+        "turned_on_at": null
     },
     {
         "name": "Main Alarm",
         "type": "Alarm",
-        "is_on": true
+        "is_on": false,
+        "working_hours": 0.026572728753089903,
+        "turned_on_at": null
     },
     {
         "name": "Cooling Fan",
         "type": "Fan",
-        "is_on": true
+        "is_on": false,
+        "working_hours": 0.005121251675817701,
+        "turned_on_at": null
     }
 ]

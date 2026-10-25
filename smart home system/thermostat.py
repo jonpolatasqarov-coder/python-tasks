@@ -1,3 +1,4 @@
+
 from device import Device
 
 
@@ -9,32 +10,63 @@ class Thermostat(Device):
         self.observers = []
 
     def add_observer(self, observer):
-        self.observers.append(observer)
+        if observer not in self.observers:
+            self.observers.append(observer)
 
-    def set_temperature(self, temperature):
-        self.temperature = temperature
-        self.temperature_history.append(temperature)
+    def remove_observer(self, observer):
+        if observer in self.observers:
+            self.observers.remove(observer)
 
-        print(
-            f"{self.name} temperature changed to "
-            f"{self.temperature}°C."
-        )
-
+    def notify_observers(self):
         for observer in self.observers:
             observer.update(self.temperature)
 
     def turn_on(self):
-        self.is_on = True
-        print(f"{self.name} is turned on.")
+        if not self.is_on:
+            self.start_timer()
+            print(f"{self.name} turned ON.")
 
     def turn_off(self):
-        self.is_on = False
-        print(f"{self.name} is turned off.")
+        if self.is_on:
+            self.stop_timer()
+            print(f"{self.name} turned OFF.")
+
+
+    def set_temperature(self, temperature):
+        if not self.is_on:
+            print(
+                "Cannot change temperature. "
+                "The thermostat is OFF."
+            )
+            return
+
+        try:
+            temperature = float(temperature)
+        except (ValueError, TypeError):
+            print("Invalid temperature. Please enter a number.")
+            return
+
+        if not 10 <= temperature <= 35:
+            print("Temperature must be between 10°C and 35°C.")
+            return
+
+        self.temperature = temperature
+        self.temperature_history.append(self.temperature)
+
+        print(
+            f"{self.name} temperature set to "
+            f"{self.temperature}°C."
+        )
+
+        self.notify_observers()
+
 
     def status_report(self):
         status = "ON" if self.is_on else "OFF"
+        working_time = self.format_working_time()
 
         return (
             f"{self.name}: {status}, "
-            f"Temperature: {self.temperature}°C"
+            f"Temperature: {self.temperature}°C, "
+            f"Working time: {working_time}"
         )
