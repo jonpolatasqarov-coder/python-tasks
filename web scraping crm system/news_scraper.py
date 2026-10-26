@@ -1,44 +1,49 @@
-from bs4 import BeautifulSoup
 
 from scraper import Scraper
-from retry import retry, NotFoundError
-from logger import log
+import feedparser
 
 
 class NewsScraper(Scraper):
-    @retry
+    def __init__(self, url="https://feeds.bbci.co.uk/news/rss.xml"):
+        super().__init__(url)
+
     def scrape(self):
-        log(f"START: NewsScraper - {self.url}")
+        self.data = []
 
-        try:
-            response = self.get_response()
+        response = self.get_response()
+        response.raise_for_status()
+        
+        feed = feedparser.parse(response.content)
 
-            if response.status_code == 404:
-                log(f"ERROR: 404 - {self.url}")
-                raise NotFoundError("Page not found")
+        if feed.bozo:
+            print(f"RSS parsing warning: {feed.bozo_exception}")
 
-            soup = BeautifulSoup(response.text, "lxml")
+        if not feed.entries:
+            raise ValueError(
+                f"No news articles found. "
+                f"HTTP status: {response.status_code}; "
+                f"Content-Type: {response.headers.get('Content-Type')}; "
+                f"Response preview: {response.text[:200]!r}"
+            )
+        
+        for entry in feed.entries:
+            title = entry.get("title", "").strip()
+            link = entry.get("link", "").strip()
+            description = entry.get("summary", "").strip()
+            published_at = entry.get("published", "")
 
-            quotes = soup.find_all("div", class_="quote")
+            if not title or not link:
+                continue
 
-            for quote in quotes:
-                text = quote.find("span", class_="text")
-                author = quote.find("small", class_="author")
+            self.data.append({
+                "title": title,
+                "description": description,
+                "url": link,
+                "published_at": published_at,
+                "source": "BBC News"
+            })
 
-                if text and author:
-                    self.data.append({
-                        "title": text.get_text(strip=True),
-                        "author": author.get_text(strip=True),
-                        "url": self.url
-                    })
+        if not self.data:
+            raise ValueError("No news articles were found.")
 
-            log(f"END: NewsScraper - {self.url}")
-
-            print(self.data)
-
-        except NotFoundError:
-            raise
-
-        except Exception as error:
-            log(f"ERROR: {error}")
-            print(f"Error: {error}")
+        return self.data

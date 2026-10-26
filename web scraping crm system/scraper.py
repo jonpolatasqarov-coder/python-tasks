@@ -9,8 +9,8 @@ class Scraper(ABC):
         self.data = []
 
     def get_response(self):
-        response = requests.get(self.url)
-
+        response = requests.get(self.url, timeout=10)
+        response.raise_for_status()
         return response
 
     @abstractmethod
