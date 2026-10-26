@@ -27,7 +27,7 @@ class Quest:
 
 def generate_random_quest():
     quests = [
-        Quest("top item", "Health Potion"),
+        Quest("find item", "Health Potion"),
         Quest("kill monster", "Goblin"),
         Quest("explore zone", "Dark Forest")
     ]

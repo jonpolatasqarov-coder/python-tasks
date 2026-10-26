@@ -1,0 +1,41 @@
+[2026-10-26 19:59:50] [Player: 1] 1 attacked Goblin for 10 damage.
+[2026-10-26 19:59:50] [Player: 1] Goblin attacked 1 for 5 damage.
+[2026-10-26 19:59:50] [Player: 1] 1 attacked Goblin for 10 damage.
+[2026-10-26 19:59:50] [Player: 1] Goblin attacked 1 for 5 damage.
+[2026-10-26 19:59:50] [Player: 1] 1 attacked Goblin for 10 damage.
+[2026-10-26 19:59:50] [Player: 1] Goblin attacked 1 for 5 damage.
+[2026-10-26 19:59:51] [Player: 1] 1 attacked Goblin for 10 damage.
+[2026-10-26 19:59:51] [Player: 1] Goblin attacked 1 for 5 damage.
+[2026-10-26 19:59:51] [Player: 1] 1 attacked Goblin for 10 damage.
+[2026-10-26 19:59:51] [Player: 1] Goblin attacked 1 for 5 damage.
+[2026-10-26 19:59:51] [Player: 1] 1 attacked Goblin for 10 damage.
+[2026-10-26 19:59:51] [Player: 1] Goblin was defeated!
+[2026-10-26 19:59:51] [Player: 1] Quest completed: kill monster: Goblin [Completed]
+[2026-10-26 19:59:51] [Player: 1] New quest: find item: Ancient Key [Active]
+[2026-10-26 19:59:55] [Player: 1] You found Ancient Key.
+[2026-10-26 19:59:55] [Player: 1] Quest completed: find item: Ancient Key [Completed]
+[2026-10-26 19:59:55] [Player: 1] New quest: explore zone: Dark Forest [Active]
+[2026-10-26 19:59:55] [Player: 1] You explored Dark Forest.
+[2026-10-26 19:59:55] [Player: 1] Quest completed: explore zone: Dark Forest [Completed]
+[2026-10-26 20:01:54] [Player: 1] 1 attacked Goblin for 10 damage.
+[2026-10-26 20:01:54] [Player: 1] Goblin attacked 1 for 5 damage.
+[2026-10-26 20:01:54] [Player: 1] 1 attacked Goblin for 10 damage.
+[2026-10-26 20:01:54] [Player: 1] Goblin attacked 1 for 5 damage.
+[2026-10-26 20:01:54] [Player: 1] 1 attacked Goblin for 10 damage.
+[2026-10-26 20:01:54] [Player: 1] Goblin attacked 1 for 5 damage.
+[2026-10-26 20:01:54] [Player: 1] 1 attacked Goblin for 10 damage.
+[2026-10-26 20:01:54] [Player: 1] Goblin attacked 1 for 5 damage.
+[2026-10-26 20:01:55] [Player: 1] 1 attacked Goblin for 10 damage.
+[2026-10-26 20:01:55] [Player: 1] Goblin retreated from battle!
+[2026-10-26 20:01:55] [Player: 1] 1 attacked Goblin for 10 damage.
+[2026-10-26 20:01:55] [Player: 1] Goblin attacked 1 for 10 damage.
+[2026-10-26 20:01:56] [Player: 1] 1 attacked Goblin for 10 damage.
+[2026-10-26 20:01:56] [Player: 1] Goblin retreated from battle!
+[2026-10-26 20:01:57] [Player: 1] 1 attacked Goblin for 10 damage.
+[2026-10-26 20:01:57] [Player: 1] Goblin attacked 1 for 15 damage.
+[2026-10-26 20:01:58] [Player: 1] 1 attacked Goblin for 10 damage.
+[2026-10-26 20:01:58] [Player: 1] Goblin attacked 1 for 15 damage.
+[2026-10-26 20:01:59] [Player: 1] 1 attacked Goblin for 10 damage.
+[2026-10-26 20:01:59] [Player: 1] Goblin was defeated!
+[2026-10-26 20:01:59] [Player: 1] Quest completed: kill monster: Goblin [Completed]
+[2026-10-26 20:01:59] [Player: 1] New quest: find item: Ancient Key [Active]

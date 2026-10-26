@@ -1,23 +1,34 @@
 {
     "player": {
         "name": "Hero",
-        "health": 90,
+        "health": 100,
         "max_health": 100,
         "strength": 20,
         "defense": 10,
+        "base_defense": 10,
         "state": "HealthyState",
-        "inventory": []
+        "inventory": [
+            {
+                "name": "Health Potion",
+                "heal_amount": 30
+            }
+        ]
     },
     "enemy": {
         "name": "Goblin",
-        "health": 60,
+        "health": 0,
         "max_health": 60,
         "strength": 15,
-        "defense": 5
+        "defense": 5,
+        "has_retreat": true
     },
     "quest": {
-        "quest_type": "explore zone",
-        "target": "Dark Forest",
-        "completed": false
+        "quest_type": "find item",
+        "target": "Health Potion",
+        "completed": true
+    },
+    "world": {
+        "name": "Dark Forest",
+        "items": []
     }
 }

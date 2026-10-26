@@ -1,40 +1,48 @@
+import random
 from character import Character
 
 
 class Enemy(Character):
     def __init__(self, name, health, strength, defense):
-        super().__init__(
-            name,
-            health,
-            strength,
-            defense
-        )
+        super().__init__(name, health, strength, defense)
+        self.has_retreat = False
 
     def choose_action(self, player):
-        if self.health <= self.max_health * 0.3:
-            return "retreat"
+        if (
+            not self.is_alive()
+            or self.has_retreat
+            or not player.is_alive()
+        ):
+            return None
+
+        if self.health <= 10:
+            return random.choice(["attack", "retreat"])
 
         return "attack"
 
     def take_action(self, player):
+        if (
+            not self.is_alive()
+            or self.has_retreat
+            or not player.is_alive()
+        ):
+            return None
+
         action = self.choose_action(player)
 
         if action == "attack":
             damage = self.attack(player)
-
-            print(
-                f"{self.name} attacked "
-                f"{player.name} for {damage} damage."
+            message = (
+                f"{self.name} attacked {player.name} "
+                f"for {damage} damage."
             )
+            print(message)
+            return message
 
-            return (
-                f"{self.name} attacked "
-                f"{player.name} for {damage} damage."
-            )
-
-        elif action == "retreat":
-            print(f"{self.name} retreated!")
-
-            return f"{self.name} retreated!"
+        if action == "retreat":
+            self.has_retreat = True
+            message = f"{self.name} retreated from battle!"
+            print(message)
+            return message
 
         return None

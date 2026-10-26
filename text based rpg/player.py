@@ -1,3 +1,4 @@
+
 from character import Character
 from states import HealthyState, PoisonedState, DeadState
 
@@ -11,16 +12,20 @@ class Player(Character):
             defense
         )
 
+        self.defend_count = 0
+        self.actions_since_defend = 0
         self.base_defense = defense
         self.inventory = []
         self.state = HealthyState()
+
+        self.update_state()
 
     def update_state(self):
         if self.health <= 0:
             self.health = 0
             self.state = DeadState()
 
-        elif self.health <= self.max_health * 0.3:
+        elif self.health <= self.max_health * 0.5:
             self.state = PoisonedState()
 
         else:
@@ -28,22 +33,32 @@ class Player(Character):
 
     def perform_action(self):
         self.update_state()
+
+        if isinstance(self.state, DeadState):
+            self.state.handle_action(self)
+            return False
+
         self.state.handle_action(self)
         self.update_state()
 
+        return self.is_alive()
+
     def defend(self):
+        self.update_state()
+
         if isinstance(self.state, DeadState):
             print(f"{self.name} is dead and cannot defend.")
             return
 
         self.defense = self.base_defense + 5
-
         print(f"{self.name} is defending!")
 
     def reset_defense(self):
         self.defense = self.base_defense
 
     def use_item(self, item):
+        self.update_state()
+
         if isinstance(self.state, DeadState):
             print(f"{self.name} is dead and cannot use items.")
             return

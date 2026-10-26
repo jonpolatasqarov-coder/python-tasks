@@ -25,3 +25,10 @@ class HealthPotion(Item):
             f"{player.name} used Health Potion "
             f"and restored {healed} HP."
         )
+        
+class AncientKey(Item):
+    def __init__(self):
+        super().__init__("Ancient Key")
+
+    def use(self, player):
+        print("The ancient key has no use yet.")   

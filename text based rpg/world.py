@@ -1,3 +1,4 @@
+
 class World:
     def __init__(self, name):
         self.name = name
@@ -18,6 +19,19 @@ class World:
     def add_quest(self, quest):
         self.quests.append(quest)
 
+    def find_item(self, player):
+        if not self.items:
+            print("There are no items left to find.")
+            return None
+
+        item = self.items[0]
+        self.items.remove(item)
+        player.add_item(item)
+
+        print(f"You found: {item.name}!")
+
+        return item
+
     def show_world(self):
         print(f"\n=== {self.name} ===")
 
@@ -30,8 +44,11 @@ class World:
             print(f"- {enemy.name}")
 
         print("\nItems:")
-        for item in self.items:
-            print(f"- {item.name}")
+        if self.items:
+            for item in self.items:
+                print(f"- {item.name}")
+        else:
+            print("- No items remaining")
 
         print("\nQuests:")
         for quest in self.quests:

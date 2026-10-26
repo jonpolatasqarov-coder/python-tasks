@@ -9,15 +9,15 @@ class Character:
     def is_alive(self):
         return self.health > 0
 
+
+
     def take_damage(self, damage):
         actual_damage = max(0, damage - self.defense)
-        self.health -= actual_damage
-
-        if self.health < 0:
-            self.health = 0
-
+        self.health = max(0, self.health - actual_damage)
         return actual_damage
 
+
+
     def attack(self, target):
-        damage = self.strength
+        damage = self.strength - 5
         return target.take_damage(damage)
